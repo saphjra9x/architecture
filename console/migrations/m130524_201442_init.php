@@ -22,6 +22,7 @@ class m130524_201442_init extends Migration
             'first_name' => $this->string(),
             'last_name' => $this->string(),
             'full_name' => $this->string(),
+            'gender' => $this->string(),
             'specialty_id' => $this->integer(),
             'position_id' => $this->integer(),
             'avatar' => $this->string(),

@@ -10,14 +10,17 @@ use common\models\User;
  */
 class SignupForm extends Model
 {
-    public $full_name;
-    public $phone;
     public $username;
-    public $email;
-    public $type_user_id;
+    public $full_name;
     public $password;
-    public $re_password;
+    public $email;
     public $permission;
+    public $first_name;
+    public $last_name;
+    public $gender;
+    public $phone;
+    public $province_id;
+    public $district_id;
 
     /**
      * {@inheritdoc}
@@ -54,9 +57,8 @@ class SignupForm extends Model
         $user = new User();
         $user->username = $this->username;
         $user->full_name = $this->full_name;
-        $user->phone = $this->phone;
         $user->email = $this->email;
-        $user->permission = 3;
+        $user->permission = $this->permission;
         $user->setPassword($this->password);
         $user->generateAuthKey();
 
