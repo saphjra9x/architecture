@@ -136,6 +136,7 @@ class SiteController extends Controller
      */
     public function actionView($category_slug = null, $content_slug = null, $ct = null)
     {
+
         $category = FunctionHelper::get_category_by_slug($category_slug);
 
         if (!$category) {
@@ -147,6 +148,7 @@ class SiteController extends Controller
         $page = '';
         $classified = FunctionHelper::get_classified_by_slug($content_slug);
         $search = $this->search($ct, $category['id']);
+
         switch ($category['page']['key']) {
             case 'news-page':
                 if (!$post && $content_slug) {
@@ -168,6 +170,9 @@ class SiteController extends Controller
                 }
 
                 $page = !$classified ? 'classified-page' : 'detail-classified-page';
+                break;
+            case 'architectural':
+                $page = 'architectural';
                 break;
             case 'single-page':
                 $page = 'single-page';

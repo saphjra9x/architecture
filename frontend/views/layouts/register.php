@@ -21,8 +21,6 @@ $favicon = FunctionHelper::get_general_information()['favicon'];
     <?= Html::csrfMetaTags() ?>
     <title><?= Html::encode($this->title) ?></title>
     <?php $this->head() ?>
-    <link rel="stylesheet" type="text/css"
-          href="/filemain/login.css" media="all">
 </head>
 <body class="bg-site">
 <?php $this->beginBody() ?>

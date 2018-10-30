@@ -5,102 +5,88 @@
 
 /* @var $model \common\models\LoginForm */
 
-use yii\widgets\ActiveForm;
-use yii\helpers\Url;
-
-$this->title = 'Register';
-$this->params['breadcrumbs'][] = $this->title;
 ?>
-<?php $form = ActiveForm::begin() ?>
-<div class="register-container">
-    <div class="registerAccount">
-        <h1>Đăng ký tài khoản</h1>
-        <i class="fa fa-close"></i>
-        <div class="loginerror" style="display:none;"></div>
-        <div class="row-field">
-            <?= $form->field($model, 'full_name')->textInput(
-                [
-                    'placeholder' => 'Họ tên',
-                    'class' => 'field-content',
-                    'style' => 'padding-left:10px'
-                ]
-            )->label(false) ?>
-            <div id="validateFortxtUserName" class="error-message"></div>
-        </div>
-        <div class="row-field">
-            <?= $form->field($model, 'phone')->textInput(
-                [
-                    'placeholder' => 'Số điện thoại',
-                    'class' => 'field-content',
-                    'style' => 'padding-left:10px'
-                ]
-            )->label(false) ?>
-            <div id="validateFortxtUserName" class="error-message"></div>
-        </div>
-        <div class="row-field">
-            <?= $form->field($model, 'username')->textInput(
-                [
-                    'placeholder' => 'Tên đăng nhập',
-                    'class' => 'field-content',
-                    'style' => 'padding-left:10px'
-                ]
-            )->label(false) ?>
-            <div id="validateFortxtUserName" class="error-message"></div>
-        </div>
-        <div class="row-field">
-            <?= $form->field($model, 'email')->textInput(
-                [
-                    'placeholder' => 'Email đăng ký',
-                    'class' => 'field-content',
-                    'style' => 'padding-left:10px'
-                ]
-            )->label(false) ?>
-            <div id="validateFortxtPrimaryEmail" class="error-message"></div>
-        </div>
-        <div class="row-field">
-            <div class="field-content content-half" style="margin-right: 10px;">
-                <?= $form->field($model, 'password')->passwordInput(
-                    [
-                        'placeholder' => 'Mật khẩu',
-                        'id' => 'password',
-                        'style' => 'padding-left:10px'
-                    ]
-                )->label(false) ?>
+
+<link href="/themelogin/css/login.css" rel="stylesheet">
+<link href="/themelogin/css/bootstrap.css" rel="stylesheet">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+<div class="wrap container">
+    <div class="part-6">
+        <section>
+            <div class="col-md-12 kt-col-md-12 login-them">
+                <div class="h2" style="font-weight: bold;text-align: center">
+                    Đăng kí
+                </div>
+                <form id="form-signup" method="post">
+                    <div class="form-group field-exampleInputEmail1 required has-success">
+                        <label class="control-label" for="exampleInputEmail1">
+                            Tên đăng nhập hoặc email(*)
+                        </label>
+                        <input type="text" id="exampleInputEmail1" class="form-control" name="SignupForm[username]"
+                               autofocus="" aria-required="true" aria-invalid="false">
+                        <p class="help-block help-block-error"></p>
+                    </div>
+                    <div class="form-group field-exampleInputPassword1 required has-success">
+                        <label class="control-label" for="exampleInputPassword1">
+                            Mật khẩu it nhất 6 kí tự (*)
+                        </label>
+                        <input type="password" id="exampleInputPassword1" class="form-control"
+                               name="SignupForm[password]" aria-required="true" aria-invalid="false">
+                        <p class="help-block help-block-error"></p>
+                    </div>
+                    <div class="form-group field-exampleInputPassword1 required has-success">
+                        <label class="control-label" for="exampleInputPassword1">
+                            Họ và tên (*)
+                        </label>
+                        <input type="text" id="exampleInputPassword1" class="form-control" name="SignupForm[fullname]"
+                               placeholder="Họ tên đầy đủ" aria-required="true">
+                        <p class="help-block help-block-error"></p>
+                    </div>
+                    <div class="form-group">
+                        <label>
+                            Bạn muốn:
+                        </label>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <input name="select" type="radio" value="#" id="choice_2_9_0">
+                                <label for="choice_2_9_0" id="label_2_9_0">
+                                    Trở thành kiến trúc sư
+                                </label>
+                            </div>
+                            <div class="col-md-6">
+                                <input name="select" type="radio" value="#" id="choice_2_9_1">
+                                <label for="choice_2_9_1" id="label_2_9_1">
+                                    Trở thành người dùng
+                                </label>
+                            </div>
+                        </div>
+                        <p class="help-block help-block-error"></p>
+                    </div>
+
+                    <div class="form-group">
+                        <button type="reset" class="btn btn-default col-xs-6">
+                            Nhập lại
+                        </button>
+                        <button type="submit" class="btn btn-success col-xs-6">
+                            Đăng ký
+                        </button>
+                    </div>
+                </form>
+                <p title="Quên mật khẩu">
+                    <a class="kt-click-a" href="/request-password-reset">
+                        <i class="fa fa-arrow-circle-right"></i>
+                        Quên mật khẩu ?
+                    </a>
+                </p>
+                <div class="form-group">
+                    Khi <a class="kt-click-a" href="/login" title="Đăng kí">đăng
+                        nhập</a> hoặc đăng kí, tôi thừa nhận và đồng ý với điều
+                    khoản sử dụng và
+                    chính sách bảo mật của kientruc.com.
+                </div>
+                <div class="clearfix"></div>
             </div>
-            <div class="field-content content-half">
-                <?= $form->field($model, 're_password')->passwordInput(
-                    [
-                        'placeholder' => 'Nhập lại mật khẩu',
-                        'id' => 'repassword',
-                        'style' => 'padding-left:10px'
-                    ]
-                )->label(false) ?>
-            </div>
-        </div>
-        <button id="btnRegister" class="button-register"><i class="fa fa-spinner fa-spin"></i>Đăng ký</button>
-        <div class="reg-login">
-            Đã là thành viên?
-            <a href="<?= Url::to(['site/login']) ?>">
-                Đăng nhập
-            </a>
-            <span><a href="<?= Url::to(['site/index']) ?>"> - Trang chủ</a></span>
-        </div>
-    </div>
+            <div class="clearfix"></div>
+        </section>
+    </div><!-- part-6 -->
 </div>
-<?php ActiveForm::end() ?>
-<style>
-    a {
-        text-decoration: none !important;
-    }
-    .help-block{
-        padding: 5px;
-    }
-</style>
-<script>
-    window.onload = function () {
-        let screen_width = screen.width;
-        if (screen_width <= 768) {
-            window.location = '/mobile-site/register';
-        }
-    };
-</script>
