@@ -1,0 +1,106 @@
+div.part-01-banner-top{
+    background: #f1f1f1 url(/img/background04.jpg) no-repeat;
+    background-position: center;
+    background-size: 100% auto;
+    padding: 130px 0px;
+    margin-bottom: 0px;
+    color: white;
+}
+
+div.bg-black{
+    background-color: #000000ad;
+    overflow: hidden;
+    padding: 30px 20px;
+}
+div.div-step{
+    position: relative;
+    text-align: center;
+    margin-top: 20px;
+}
+div.div-step:before{
+    position: absolute;
+    top: 28px;
+    left: 0px;
+    content: "";
+    height: 2px;
+    width: 60%;
+    margin: 0 20%;
+    background: white;
+}
+div.div-step div.div-step-00{
+    width: 30%;
+    display: inline-block;
+    vertical-align: text-top;
+}
+div.div-step div.div-step-00 b{
+    display: block;
+}
+div.div-step div.div-step-00 span{}
+div.div-step div.div-step-00 i{
+    display: block;
+}
+
+
+div.frm-step{
+    background: white;
+    overflow: hidden;
+    padding-top: 15px;
+}
+div.menu-step{
+    border: 1px solid #e6e6e6;
+    overflow: hidden;
+    margin-bottom: 15px;
+    background: #f1f1f1;
+}
+div.menu-step div.menu-step-00{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+div.menu-step div.menu-step-00 a{
+    color: #a7a7a7;
+    padding-left: 30px;
+    white-space: nowrap;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: list-item;
+}
+div.menu-step div.menu-step-00 a span{
+    display: block;
+    height: 29px;
+    width: 29px;
+    position: absolute;
+    top: 6px;
+    right: -14px;
+    box-shadow: 1px -1px 1px #b1b1b1;
+    transform: rotate(45deg);
+    z-index: 1;
+}
+div.menu-step div.menu-step-00 a span:before{
+    position: absolute;
+    top: 0;
+    left: -2px;
+    width: 30px;
+    height: 30px;
+    content: "";
+    background: #f1f1f1;
+}
+div.menu-step-00.active,
+div.menu-step-00.active a span,
+div.menu-step-00.active a span:before{
+    background: white !important;
+}
+
+div.read-text{
+    max-height: 250px;
+    overflow-y: scroll;
+    border: 1px solid #e6e6e6;
+    padding: 30px;
+    text-align: justify;
+}
+@media (max-width: 768px) {
+    div.part-01-banner-top
+    {
+        background-size: auto 100%;
+    }
+}

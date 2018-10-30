@@ -12,199 +12,200 @@ $ft_left = FunctionHelper::get_setting_by_key('ch3');
 $ft_center = FunctionHelper::get_setting_by_key('ch4');
 $fb = FunctionHelper::get_general_information()['page_facebook'];
 ?>
+<footer>
 
-<div id="BottomMainContent"></div>
-<div class="footer-banner">
-    <div id="SubBottomLeftMainContent" style="float: left; width: 495px">
-        <div class="adPosition" positioncode="BANNER_POSITION_BOTTOM1" style="" hasshare="True"
-             hasnotshare="True"></div>
-        <div style="clear:both;"></div>
-    </div>
-    <div id="SubBottomRightMainContent" style="float: left; width: 495px; margin-left: 5px">
-        <div class="adPosition" positioncode="BANNER_POSITION_BOTTOM2" style="" hasshare="True"
-             hasnotshare="True"></div>
-        <div style="clear:both;"></div>
-    </div>
-</div>
-<style type="text/css">
-    .footer-bottom-top-1 a {
-        white-space: nowrap;
-    }
-</style>
-<div class="footer">
-    <div class="footer-bottom">
-        <div class="footer-bottom-end">
-            <img src="/filemain/line-footer.png" alt=""
-                 noloaderror="true">
-        </div>
-        <div class="clear10"></div>
-        <div class="footer-bottom-end-row1" style="padding: 30px 0">
-            <div class="row add-row">
-                <div class="col-sm-3 col3" style="text-align: center">
-                    <div>
-                        <?= $ft_left['content'] ?>
-                    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2 col-sm-4">
+                <div class="logo-bottom">
+                    <img src="image/kientruc.com.jpg" alt="KIENTRUC.com" title="KIENTRUC.com"
+                         class="img-responsive"/>
                 </div>
-                <div class="col-sm-6 col6" style="text-align: center">
-                    <?= $ft_center['content'] ?>
-                </div>
-                <div class="col-sm-3 col3">
-                    <strong style="font-size: 14px">
-                        Thông Tin Liên Hệ
-                    </strong>
-                    <div style="margin-top: 15px">
-                        <div class="form-group">
-                            <input id="fullname1" type="text" placeholder=" Họ Tên">
-                        </div>
-                        <div class="form-group">
-                            <input id="phone1" type="text" placeholder=" Số Điện Thoại">
-                        </div>
-                        <div class="form-group">
-                            <input id="email1" type="text" placeholder=" Email">
-                        </div>
-                        <div class="form-group">
-                            <select name="" id="exigency1" style="width: 143px;height: 27px">
-                                <option value="Nhà đất bán">Nhà đất bán</option>
-                                <option value="Nhà đất cho thuê">Nhà đất cho thuê</option>
-                            </select>
-                        </div>
-                        <input onclick="register(1)" type="button" value="Gửi" class="btn btn-success">
-                    </div>
+                <div class="info-bottom">
+                    <ul class="list-unstyled">
+                        <li>KIENTRUC.com</li>
+                        <li><p style="font-size: 12px;">&copy; 2015-2018 KIENTRUC.com jsc</p></li>
+                        <!--<li>284/57 Lý Thường Kiệt, P.14. Q10. HCM</li>
+                        <li>Email: cskh@kientruc.com</li>
+                        <li>Hotline: 0937 66 99 66</li>
+                        <li>Giấy phép số: 0314145398</li>-->
+                    </ul>
                 </div>
             </div>
+            <div class="col-md-2 col-sm-2">
+                <div class="foot-h4-title">Khám phá</div>
+                <ul class="list-unstyled foot-ul">
+                    <li><a href="index.html" title="Trang chủ">Trang chủ</a></li>
+                    <li><a href="hoi-dap.html" title="Hỏi chuyên gia">Hỏi chuyên gia</a></li>
+                    <li><a href="tim-kien-truc-su.html" title="Tìm kiến trúc sư">Tìm kiến trúc sư</a></li>
+                    <li><a href="du-an-moi.html" title="Dự án mới">Dự án mới</a></li>
+                    <li><a href="tap-chi.html" title="Tạp chí">Tạp chí</a></li>
+                    <li><a href="showroom.html" title="Showroom">Showroom</a></li>
+                </ul>
+            </div>
+            <div class="col-md-2 col-sm-2">
+                <div class="foot-h4-title">PHONG THỦY</div>
+                <ul class="list-unstyled foot-ul">
+                    <li><a target="_blank" href="phong-thuy/phong-thuy-nha-C9.html"
+                           title="Phong Thủy Nhà">Phong Thủy Nhà</a></li>
+                    <li><a target="_blank" href="phong-thuy/xem-huong-nha-C10.html"
+                           title="Xem hướng Nhà">Xem hướng Nhà</a></li>
+                    <li><a target="_blank" href="phong-thuy/mau-sac-phong-thuy-C11.html"
+                           title="Màu sắc Phong Thủy">Màu sắc Phong Thủy</a></li>
+                    <li><a target="_blank" href="phong-thuy/xem-tuoi-lam-nha-C15.html"
+                           title="Xem tuổi làm nhà">Xem tuổi làm nhà</a></li>
+                </ul>
+            </div>
+            <div class="col-md-2 col-sm-2">
+                <div class="foot-h4-title">MẪU NHÀ ĐẸP</div>
+                <ul class="list-unstyled foot-ul">
+                    <li><a target="_blank" href="du-an-moia825.html?lct=2&amp;hm=&amp;pc=&amp;tt=&amp;sort=0"
+                           title="Chung cư">Chung cư</a></li>
+                    <li><a target="_blank" href="du-an-moi50da.html?lct=51&amp;hm=&amp;pc=&amp;tt=&amp;sort=0"
+                           title="Biệt thự">Biệt thự</a></li>
+                    <li><a target="_blank" href="du-an-moi05b0.html?lct=3&amp;hm=&amp;pc=&amp;tt=&amp;sort=0"
+                           title="Nhà mặt phố">Nhà mặt phố</a></li>
+                    <li><a target="_blank" href="du-an-moi6f2a.html?lct=62&amp;hm=&amp;pc=&amp;tt=&amp;sort=0"
+                           title="Cafe">Cafe</a></li>
+                    <li><a target="_blank" href="du-an-moid6c5.html?lct=61&amp;hm=&amp;pc=&amp;tt=&amp;sort=0"
+                           title="Văn phòng">Văn phòng</a></li>
+                    <li><a target="_blank" href="du-an-moi310b.html?lct=63&amp;hm=&amp;pc=&amp;tt=&amp;sort=0"
+                           title="Shop">Shop</a></li>
+                </ul>
+            </div>
+            <div class="col-md-2 col-sm-2">
+                <div class="foot-h4-title">Shop</div>
+                <ul class="list-unstyled foot-ul">
+                    <li><a target="_blank" href="http://shop.kientruc.com/shop-noi-that-C2.html"
+                           title="Shop nội thất">Shop nội thất</a></li>
+                    <li><a target="_blank" href="http://shop.kientruc.com/shop-vat-lieu-C4.html"
+                           title="Shop vật liệu">Shop vật liệu</a></li>
+                    <li><a target="_blank" href="http://shop.kientruc.com/nha-cung-cap-C422.html"
+                           title="Nhà cung cấp">Nhà cung cấp</a></li>
+                    <li><a target="_blank" href="http://shop.kientruc.com/dich-vu-chuyen-nghiep-C3.html"
+                           title="Dịch vụ">Dịch vụ</a></li>
+                </ul>
+            </div>
+            <div class="col-md-2 col-sm-12">
+                <div class="foot-h4-title">Kết nối KIENTRUC.com</div>
+                <link itemscope="url"
+                      href="index.html">
+                <ul class="list-unstyled foot-ul foot-ul-px" itemscope itemtype="http://schema.org/Organization">
+                    <li>
+                        <a itemprop="sameAs" href="https://www.facebook.com/kientruccom/" title="Facebook"
+                           target="_blank">
+                            <i class="fa fa-facebook"></i> <span>Facebook</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a itemprop="sameAs" href="https://twitter.com/KIENTRUCcom" title="Twitter" target="_blank">
+                            <i class="fa fa-twitter"></i> <span>Twitter</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a itemprop="sameAs" href="https://plus.google.com/u/0/101720896954211861687" title="Google"
+                           target="_blank">
+                            <i class="fa fa-google"></i> <span>Google</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a itemprop="sameAs" href="https://www.youtube.com/channel/UCDqI3vvzJ8vQJDqPvKW5nFA"
+                           title="Youtube" target="_blank">
+                            <i class="fa fa-youtube"></i> <span>Youtube</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a itemprop="sameAs" href="https://www.instagram.com/kientruc.com_official/"
+                           title="Instagram" target="_blank">
+                            <i class="fa fa-instagram"></i> <span>Instagram</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a itemprop="sameAs" href="https://www.pinterest.com/KienTruc_Com/" title="Pinterest"
+                           target="_blank">
+                            <i class="fa fa-pinterest-p"></i> <span>Pinterest</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a itemprop="sameAs" href="https://www.linkedin.com/in/kientruc/" title="Linkedin"
+                           target="_blank">
+                            <i class="fa fa-linkedin"></i> <span>Linkedin</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a itemprop="sameAs" href="javascript:;" title="RSS" target="_blank">
+                            <i class="fa fa-rss"></i> <span>RSS</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="clearfix"></div>
+            <div class="col-md-12" style="margin-top: 60px"></div>
         </div>
     </div>
-</div>
-</div>
-<style>
-    @media (min-width: 768px) {
-        .col3 {
-            width: 22%;
-            text-align: center;
-        }
 
-        .col6 {
-            width: 50%;
-            float: left;
-        }
+</footer>
 
+
+<style type="text/css">
+    #form-report-info label {
+        font-weight: 500;
+        font-size: 14px;
     }
 
-    @media (min-width: 768px) {
-        .col3, .col6 {
-            float: left;
+    @media (max-width: 768px) {
+        footer {
+            display: none;
         }
     }
-
-    .col3, .col6 {
-        position: relative;
-        min-height: 1px;
-        padding-right: 15px;
-        padding-left: 15px;
-    }
-
-    .col6 {
-        position: relative;
-        min-height: 1px;
-        padding-right: 15px;
-        padding-left: 15px;
-        box-sizing: border-box;
-    }
-
-    .add-row {
-        margin-right: -15px;
-        margin-left: -15px;
-        display: table;
-        content: " ";
-        clear: both;
-    }
-
-    .form-group {
-        margin-bottom: 15px;
-        box-sizing: border-box;
-    }
-
-    button, input, select, textarea {
-        font-family: inherit;
-        font-size: inherit;
-        line-height: inherit;
-        margin: 0;
-        font: inherit;
-        color: inherit;
-    }
-
 </style>
-<script type="text/javascript">
-    function isValidEmail(emailText) {
-        var pattern = new RegExp(/^((([a-z]|\d|[!#\$%&'\*\+\-\/=\?\^_`{\|}~]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])+(\.([a-z]|\d|[!#\$%&'\*\+\-\/=\?\^_`{\|}~]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])+)*)|((\x22)((((\x20|\x09)*(\x0d\x0a))?(\x20|\x09)+)?(([\x01-\x08\x0b\x0c\x0e-\x1f\x7f]|\x21|[\x23-\x5b]|[\x5d-\x7e]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(\\([\x01-\x09\x0b\x0c\x0d-\x7f]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]))))*(((\x20|\x09)*(\x0d\x0a))?(\x20|\x09)+)?(\x22)))@((([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.)+(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.?$/i);
-        return pattern.test(emailText);
-    };
 
-    function register(form_number) {
 
-        if ($('#fullname' + form_number).val() == "") {
-            alert("Vui lòng nhập Họ tên!");
-        }
 
-        else if ($('#phone' + form_number).val().length < 8 || isNaN($('#phone' + form_number).val())) {
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-124644846-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
 
-            alert("Số điện thoại bạn điền không hợp lệ !");
-            return false;
-        }
-        else if ($('#email' + form_number).val() == "" || !isValidEmail($('#email' + form_number).val())) {
-            alert("Email phải hợp lệ !");
-            return false;
-        }
-
-        else {
-
-            var phone = $('#phone' + form_number).val();
-            var fullname = $('#fullname' + form_number).val();
-            var email = $('#email' + form_number).val();
-            var exigency = $('#exigency' + form_number).val();
-            var content =
-                `<table>
-                <tr>
-                    <th style="padding: 15px;border: 1px solid black;">Họ và Tên</th>
-                    <th style="padding: 15px;border: 1px solid black;">Số dt</th>
-                    <th style="padding: 15px;border: 1px solid black;">Email</th>
-                    <th style="padding: 15px;border: 1px solid black;">Nhu Cầu</th>
-
-                </tr>
-                <tr>
-                    <td style="padding: 15px;border: 1px solid black;">${fullname}</td>
-                    <td style="padding: 15px;border: 1px solid black;">${phone}</td>
-                    <td style="padding: 15px;border: 1px solid black;">${email}</td>
-                    <td style="padding: 15px;border: 1px solid black;">${exigency}</td>
-
-                </tr>
-            </table>`;
-
-            var form = new FormData();
-            form.append("title", "ĐĂNG KÍ NHẬN THÔNG TIN DỰ ÁN");
-            form.append("email_root", "<?= FunctionHelper::get_general_information()['email_notify']?>");
-            form.append("name_root", "Mr.customer");
-            form.append("email_guest", email);
-            form.append("name_guest", fullname);
-            form.append("content", content);
-            var settings = {
-                "url": "admin/ajax/send-mail",
-                "method": "POST",
-                "headers": {
-                    "cache-control": "no-cache",
-                    "postman-token": "be3c982f-e715-6816-b350-f47f8bb109d8"
-                },
-                "processData": false,
-                "contentType": false,
-                "data": form,
-                "mimeType": "multipart/form-data"
-            };
-
-            $.ajax(settings).done(function (data) {
-                console.log(data);
-                alert("Cảm ơn bạn đã đăng ký! Chúng tôi sẽ liên lạc lại trong thời gian sớm nhất!");
-                window.reload();
-            });
-        }
+    function gtag() {
+        dataLayer.push(arguments);
     }
+
+    gtag('js', new Date());
+
+    gtag('config', 'UA-124644846-1');
 </script>
+
+<script src="assets/20c8f6c6/jquery.js"></script>
+<script src="assets/6b5faf4f/yii.js"></script>
+<script src="assets/df57fb5c/js/bootstrap.js"></script>
+<script src="assets/464aa278/jquery.slimscroll.min.js"></script>
+<script src="library/jquery.easeScroll.js"></script>
+<script src="library/jquery-loading-master/dist/jquery.loading.min.js"></script>
+<script src="js/javaSlide.js"></script>
+<script src="js/javaChung.js"></script>
+<script>jQuery(function ($) {
+
+        $(function ($) {
+            'use strict';
+            $('body').on('submit', '#from-search-kt-submit1', function (event, jqXHR, settings) {
+                var link = $('.input-group #search_param_kt_p').val();
+                var key = $('.input-group #key_search_kt_p').val();
+                console.log(link);
+                //window.location.href="https://www."+window.location.hostname+"/"+link;
+                window.location.href = "http://" + window.location.hostname + "/" + link + '?q=' + key;
+                return false;
+            })
+        });
+        $(document).ready(function (e) {
+            $('.search-panel .dropdown-menu').find('a').click(function (e) {
+                e.preventDefault();
+                var param = $(this).attr("href").replace("#", "");
+                var concept = $(this).text();
+                $('.search-panel span#search_concept').text(concept);
+                $('.input-group #search_param_kt_p').val(param);
+                console.log(param);
+            });
+        });
+
+    });</script>

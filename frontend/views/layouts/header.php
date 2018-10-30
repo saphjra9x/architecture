@@ -4,14 +4,12 @@
 
 /* @var $content string */
 
-use yii\helpers\Html;
 use common\helpers\FunctionHelper;
-use yii\helpers\Url;
 use common\models\User;
+use yii\helpers\Url;
 
-$logo = FunctionHelper::get_general_information()['logo'];
-$banner_top = FunctionHelper::get_images_by_photo_location_key('banner-top', 1);
-$text_run = FunctionHelper::get_setting_by_key('ch2');
+
+$info = FunctionHelper::get_general_information();
 $user = null;
 
 if (!Yii::$app->user->isGuest) {
@@ -28,271 +26,348 @@ function findModel($id)
 }
 
 ?>
-<div class="header-top">
-    <div class="header-top-left">
-        <div style="padding-top: 5px;">
-            <a href="<?= Url::to(['site/index']) ?>">
-                <img src="<?= $logo ?>"
-                     alt="Kênh thông tin mua bán, cho thuê nhà đất số 1" style="width: 100%">
-            </a>
-
-        </div>
-    </div>
-    <div class="header-top-right">
-        <div id="TopBanner">
-            <div class="container-default">
-                <div id="ctl21_BodyContainer">
-                    <div class="adPosition" positioncode="BANNER_POSITION_TOP" style="" hasshare="True"
-                         hasnotshare="False">
-                        <div class="adshared">
-                            <div class="aditem" time="15" style="display: block;">
-                                <a href=""
-                                   target="_blank"
-                                   title="" rel="nofollow">
-                                    <img src="<?= $banner_top['avatar'] ?>"
-                                         style="max-width: 100%; height:96px;">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </div>
-</div>
-<div class="header-middle-right">
-    <div style="float: left">
-        <marquee behavior="" direction="" scrollamount="5">
-            <?= $text_run['content'] ?>
-        </marquee>
-    </div>
-    <div class="user_style" style="width: 50%">
-        <div id="divUserStt" style="">
-            <?php if (!$user): ?>
-                <div>
-                    <div class="header-middle-righ-link">
-                        <a href="<?= Url::to(['site/login']) ?>" rel="nofollow">Đăng nhập</a>
-                    </div>
-                    <div class="header-middle-righ-icon">
-                        <img src="/filemain/login.png"
-                             id="ico_login">
-                    </div>
-                </div>
-                <div>
-                    <div class="header-middle-righ-link max90" id="kct_username">
-                        <a id="register" href="<?= Url::to(['site/register']) ?>" title="Đăng ký" rel="nofollow">
-                            Đăng ký
-                        </a>
-                    </div>
-
-                    <div class="header-middle-righ-icon">
-                        <img src="/filemain/register.png"
-                             id="ico_register">
-                    </div>
-                </div>
-            <?php endif; ?>
-            <?php if ($user): ?>
-                <div>
-                    <div class="header-middle-righ-link">
-                        <a href="<?= Url::to(['site/logout']) ?>" title="Đăng xuất">
-                            Đăng xuất
-                        </a>
-                    </div>
-                    <div class="header-middle-righ-icon">
-                        <img src="/filemain/login.png"
-                             id="ico_login">
-                    </div>
-                    <div>
-                        <div class="header-middle-righ-link max90" id="kct_username">
-                            <b><?= $user['username'] ?></b>
-                        </div>
-                        <div class="header-middle-righ-icon">
-                            <img src="/filemain/register.png"
-                                 id="ico_register">
-                        </div>
-                    </div>
-                </div>
-            <?php endif; ?>
-            <div class="header-middle-righ-link" id="chat-quick-inbox-icon"></div>
-        </div>
-        <div id="divCusPostProduct">
-            <div id="UserControl1_divPostProduct" class="header-middle-righ-link">
-                <a href="<?= Url::to(['site/post-news']) ?>"
-                   id="linkPostProduct"><span>Đăng tin rao</span></a>
-            </div>
-            <div class="header-middle-righ-icon">
-                <img src="/filemain/plus.png"
-                     id="ico_product">
-            </div>
-        </div>
-    </div>
-</div>
-<div class="header-menu">
-    <div id="left-page-nav"></div>
-    <div class="menupad"></div>
-    <div id="page-navigative-menu">
-        <div class="ihome">
-            <a href="<?= Url::to(['site/index']) ?>">
-                <img src="/filemain/homea.png">
-            </a>
-        </div>
-        <ul class="dropdown-navigative-menu">
-            <?php foreach (FunctionHelper::get_categories_by_parent_id(null, 0) as $key => $value): ?>
-                <?php $childent = FunctionHelper::get_categories_by_parent_id($value['id'], 0) ?>
-                <?php if (!$childent): ?>
-                    <?php if ($key == 0) { ?>
-                        <li class="lv0">
-                            <a href="<?= Url::to(['site/index']) ?>" class="haslink ">
-                                <?= $value['title'] ?>
-                            </a>
-                        </li>
-                    <?php } else { ?>
-                        <li class="lv0">
-                            <a href="<?= Url::to(['site/view', 'category_slug' => $value['slug']]) ?>" class="haslink ">
-                                <?= $value['title'] ?>
-                            </a>
-                        </li>
-                    <?php }endif; ?>
-                <?php if ($childent): ?>
-                    <li class="lv0">
-                        <a href="<?= Url::to(['site/view', 'category_slug' => $value['slug']]) ?>" class="haslink ">
-                            <?= $value['title'] ?>
-                        </a>
-
-                        <ul>
-                            <?php foreach ($childent as $key_chi => $value_chil): ?>
-                                <?php $childent1 = FunctionHelper::get_categories_by_parent_id($value_chil['id']) ?>
-                                <?php if (!$childent1) { ?>
-                                    <li class="lv1">
-                                        <a href="<?= Url::to(['site/view', 'category_slug' => $value_chil['slug']]) ?>"
-                                           class="haslink ">
-                                            <?= $value_chil['title'] ?>
-                                        </a>
-                                    </li>
-                                <?php } else { ?>
-
-                                    <li class="lv1">
-                                        <a href="<?= Url::to(['site/view', 'category_slug' => $value_chil['slug']]) ?>"
-                                           class="haslink indent">
-                                            <?= $value_chil['title'] ?>
-                                        </a>
-                                        <ul>
-                                            <?php foreach ($childent1 as $key_chil1 => $value_chil1): ?>
-                                                <li class="lv2">
-                                                    <a href="<?= Url::to(['site/view', 'category_slug' => $value_chil1['slug']]) ?>"
-                                                       class="haslink ">
-                                                        <?= $value_chil1['title'] ?>
-                                                    </a>
-                                                </li>
-                                            <?php endforeach; ?>
-                                        </ul>
-                                    </li>
-                                <?php }endforeach; ?>
-                        </ul>
-                    </li>
-                <?php endif; ?>
-            <?php endforeach; ?>
-        </ul>
-    </div>
-    <div class="menupad"></div>
-    <div id="right-page-nav"></div>
-</div>
-<div id="MiddleSubMenu">
-    <link rel="stylesheet" type="text/css" href="/filemain/broker.css?v=20180912"
-          media="all">
-    <script src="/filemain/TopSearch.ascx.js"
-            type="text/javascript">
-    </script>
-    <div class="broker-top-search">
-        <div class="col1">
-            <div class="label_search">Tìm kiếm tin rao</div>
-        </div>
-        <div class="col2">
-            <div style="position: relative;">
-                <input name="ctl00$MiddleSubMenu$_topSearch$txtKeyword" type="text" id="key_word" class="suggest"
-                       placeholder="Nhập từ khóa tìm kiếm" maxlength="100">
-            </div>
-        </div>
-        <div class="clear"></div>
-        <div id="searchcontrol">
-            <div class="col1">
-                <div id="divBrCategory" class="comboboxs advance-select-box mr10">
-                    <select class="advance-options select-text1" name="" id="exigency">
-                        <option class="advance-options" value="0">Theo nhu cầu</option>
-                        <?php foreach (FunctionHelper::get_exigency_of_classified() as $key => $value): ?>
-                            <option class="advance-options" value="<?= $value['id'] ?>">
-                                <?= $value['title'] ?>
-                            </option>
-                        <?php endforeach; ?>
-                    </select>
-                </div>
-            </div>
-            <div class="col2">
-                <div id="divSubCategory" class="comboboxs advance-select-box mr10">
-                    <select class="advance-options select-text1" name="" id="kind">
-                        <option class="advance-options" value="0">Theo loại bất động sản</option>
-                        <?php foreach (FunctionHelper::get_category_classifieds() as $key => $value): ?>
-                            <option class="advance-options" value="<?= $value['id'] ?>"><?= $value['title'] ?></option>
-                        <?php endforeach; ?>
-                    </select>
-                </div>
-                <div id="divBrProject" class="comboboxs advance-select-box mr10">
-                    <select class="advance-options select-text1" name="" id="project">
-                        <option class="advance-options" value="0">Theo dự án</option>
-                        <?php foreach (FunctionHelper::get_projects_of_classified() as $key => $value): ?>
-                            <option class="advance-options" value="<?= $value['id'] ?>"><?= $value['title'] ?></option>
-                        <?php endforeach; ?>
-                    </select>
-                </div>
-                <div id="divBrCity" class="comboboxs advance-select-box mr10" style="margin-right: 6px!important;">
-                    <select class="advance-options select-text1" name="" id="price">
-                        <option class="advance-options" value="">Theo giá</option>
-                        <option class="advance-options" value="0-1-ti">Dưới 1 tỉ</option>
-                        <option class="advance-options" value="1-2-ti">1->2 tỉ</option>
-                        <option class="advance-options" value="3-4-ti">2->3 tỉ</option>
-                        <option class="advance-options" value="3-4-ti">3->4 tỉ</option>
-                        <option class="advance-options" value="4-5-ti">4->5 tỉ</option>
-                        <option class="advance-options" value="5-10-ti">5->10 tỉ</option>
-                        <option class="advance-options" value="10-1000-ti">trên 10 tỉ</option>
-                    </select>
-                </div>
-                <div class="col3">
-                    <a id="btnSearch" href="">
-                        <input onclick="search()" type="button" name="ctl00$MiddleSubMenu$_topSearch$btnSearch"
-                               value="Tìm kiếm" id="search-id" class="search">
+<header>
+    <div class="head">
+        <div class="h-part-1">
+            <div class="container">
+                <div class="pull-left top-logo">
+                    <button type="button" class="but-menu-top collapsed" data-toggle="collapse"
+                            data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="fa fa-navicon"></span>
+                    </button>
+                    <a href="<?= Url::to(['site/index']) ?>" class="a-white">
+                        <img src="<?= $info['logo']; ?>"
+                             class="img-responsive img-logo"/>
+                        <span class="span-name-website"><?= $_SERVER['SERVER_NAME'] ?></span>
                     </a>
+
+                    <a href="#" title="Đăng kí"
+                       class="a-menu-top a-white hidden-width-320">
+                        Đăng kí
+                    </a>
+                    <a href="#" title="Đăng nhập"
+                       class="a-menu-top a-white">
+                        Đăng nhập
+                    </a>
+
                 </div>
+
+                <div class="pull-right div-menu-top a-menu-top-2">
+                    <div class="navbar-collapse" id="bs-example-navbar-collapse-0">
+                        <ul class="nav navbar-right">
+                            <li>
+                                <a style="padding: 15px 5px;"
+                                   href="<?= Url::to(['site/register'])?>"
+                                   title="Đăng kí" class="a-white hidden-width-320">
+                                    Đăng kí
+                                </a>
+                            </li>
+                            <li>
+                                <a style="padding: 15px 5px;"
+                                   href="https://login.kientruc.com?link=https://www.kientruc.com" title="Đăng nhập"
+                                   class="a-white">
+                                    Đăng nhập
+                                </a>
+                            </li>
+                        </ul>
+                    </div><!-- /.navbar-collapse -->
+                </div>
+
             </div>
         </div>
-
-        <div class="clear"></div>
+        <div class="h-part-2">
+            <div class="container">
+                <nav class="navbar navbar-default">
+                    <div class="container-fluid row">
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                            <ul class="nav navbar-nav">
+                                <?php foreach (FunctionHelper::get_categories_by_parent_id(null, 0) as $key_ca => $value_ca): ?>
+                                    <?php $chi = FunctionHelper::get_categories_by_parent_id($value_ca['id']); ?>
+                                    <?php if (!$chi): ?>
+                                        <li class="licss3 parent-menu-hover">
+                                            <a href="<?= Url::to(['site/view', 'category_slug' => $value_ca['slug']]) ?>"
+                                               title="<?= $value_ca['title'] ?>">
+                                                <i class="fa fa-comments-o"></i>
+                                                <?= $value_ca['title'] ?>
+                                            </a>
+                                        </li>
+                                    <?php else: ?>
+                                        <?php if ($value_ca['id'] == 2): ?>
+                                            <li class="licss3 parent-menu-hover">
+                                                <a href="<?= Url::to(['site/view', 'category_slug' => $value_ca['slug']]) ?>"
+                                                   title="<?= $value_ca['title'] ?>">
+                                                    <i class="fa fa-search"></i>
+                                                    <?= $value_ca['title'] ?>
+                                                </a>
+                                                <div class="hover-menu hover-menu-tim-kien-truc-su">
+                                                    <ul class="list-unstyled">
+                                                        <?php foreach ($chi as $key_chi => $value_chi): ?>
+                                                        <?php if ($key_chi==2 || $key_chi==7):?>
+                                                            <li class="duong-ke-ngan-cach">
+                                                                <?php else:?>
+                                                                <li class="">
+                                                            <?php endif;?>
+                                                                <a href="<?= Url::to(['site/view', 'category_slug' => $value_chi['slug']]) ?>"
+                                                                   title="<?= $value_chi['title'] ?>">
+                                                                    <?= $value_chi['title']; ?>
+                                                                </a>
+                                                            </li>
+                                                        <?php endforeach; ?>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                        <?php endif;
+                                        if ($value_ca['id'] == 4): ?>
+                                            <li class="licss3 parent-menu-hover-bai-viet">
+                                                <a href="<?= Url::to(['site/view', 'category_slug' => $value_ca['slug']]) ?>"
+                                                   title="<?= $value_ca['title'] ?>">
+                                                    <i class="fa fa-newspaper-o"></i>
+                                                    <?= $value_ca['title'] ?>
+                                                </a>
+                                                <div class="hover-menu-bai-viet">
+                                                    <ul class="list-unstyled">
+                                                        <?php foreach ($chi as $key_chi => $value_chi): ?>
+                                                            <li>
+                                                                <a href="<?= Url::to(['site/view', 'category_slug' => $value_chi['slug']]) ?>"
+                                                                   title="<?= $value_chi['title'] ?>">
+                                                                    <span><?= $value_chi['title'] ?></span>
+                                                                </a>
+                                                                <ul class="list-unstyled">
+                                                                    <?php foreach (FunctionHelper::get_categories_by_parent_id($value_chi['id']) as $key_chau => $value_chau): ?>
+                                                                        <li>
+                                                                            <a href="<?= Url::to(['site/view', 'category_slug' => $value_chau['slug']]) ?>"
+                                                                               title="<?= $value_chau['title'] ?>">
+                                                                                <?= $value_chau['title'] ?>
+                                                                            </a>
+                                                                        </li>
+                                                                    <?php endforeach; ?>
+                                                                </ul>
+                                                            </li>
+                                                        <?php endforeach; ?>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                        <?php endif;
+                                    endif;
+                                endforeach; ?>
+                            </ul>
+                        </div><!-- /.navbar-collapse -->
+                    </div><!-- /.container-fluid -->
+                </nav>
+            </div>
+        </div>
     </div>
-    <div class="clear"></div>
-</div>
-<div id="MainContent"></div>
-<style>
-    .select-text1 {
-        width: 150px;
-        height: 25px;
-        border-radius: 5px;
+</header>
+<style type="text/css">
+    .location-province-kt {
+        display: inline-block;
+        position: absolute;
+        top: 10px;
+        right: 5px;
+        min-width: 200px;
+    }
+
+    .search-kt-p {
+        border-right: 0;
+    }
+
+    .search-kt-p > button {
+        background: #f3f3f3;
+    }
+
+    .btn .caret {
+        margin-left: 7px;
+    }
+
+    li.nomal-p-con {
+        padding-left: 25px;
+    }
+
+    .dropdown-menu > li:hover > a, .dropdown-menu > li:hover {
+        color: #262626;
+        text-decoration: none;
+        background-color: #a29d9d;
+    }
+
+    div.mobile-position-relative {
+        position: relative;
+    }
+
+    div.search-code-product {
+        position: absolute;
+        bottom: 9px;
+    }
+
+    @media (max-width: 768px) {
+        div.mobile-position-relative {
+            position: relative;
+        }
+
+        div.search-code-product {
+            position: inherit;
+            margin-top: 10px;
+        }
+
+        .location-province-kt {
+            display: block !important;
+            position: inherit !important;
+            top: inherit !important;
+            right: inherit !important;
+            min-width: 200px;
+            margin: 3px 0px !important;
+        }
+    }
+
+    /*phan search*/
+
+    .input-group > #key_search_kt_p {
+        border-bottom-left-radius: 4px;
+        border-top-left-radius: 4px;
+    }
+
+    .input-group > #key_search_kt_p:focus {
+        border-color: #ddd;
+    }
+
+    input.navbar-search-box {
+        padding: 8px;
+        height: 100%;
+        width: 100%;
+        background: transparent;
+        outline: none;
+        margin: 0;
+        font-size: inherit;
+        color: #333;
+        border: 1px solid #ddd;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        border-radius: 3px;
+        line-height: 2em;
+    }
+
+    #hidden-search-p-kt {
+
+    }
+
+    /*phan search*/
+
+    /*
+    phan suggest css
+    */
+    div.suggest-search-p-kt {
+        position: relative;
+        min-height: 12px;
+        display: none;
+    }
+
+    div.suggest-search-p-kt:hover {
+        display: block !important;
+    }
+
+    div.suggest-search-p-kt > div.info-suggest {
+        top: 49px;
+        position: absolute;
+        left: 0;
+        background: white;
+        z-index: 99;
+        display: block;
+        width: 100%;
+        border-bottom-right-radius: 5px;
+        border-bottom-left-radius: 5px;
+        border: 1px solid #ccc;
+        border-top: 0;
+    }
+
+    div.suggest-search-p-kt > div.info-suggest .key_search_suggest {
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+    div.suggest-search-p-kt > div.info-suggest > .col-md-12 {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    div.info-suggest ul {
+        list-style-type: none;
+        padding-left: 0;
+        padding-right: 0;
+        margin: 5px 0;
+    }
+
+    div.info-suggest ul > li:hover {
+        background: #e9edf0;
+    }
+
+    div.info-suggest ul > li {
+        padding: 6px 0px;
+    }
+
+    div.info-suggest ul > li > a {
+        color: black;
+        font-size: 15px;
+        width: 100%
+    }
+
+    div.info-suggest ul > li > i {
+        color: #248445;
+        width: 20px;
+    }
+
+    div.info-suggest ul > li > a > .color-kt {
+        color: #248445;
+    }
+
+    /*
+    phan suggest css
+    */
+</style>
+<script language="JavaScript">
+    function suggestSearchHidden(even) {
+        $(".suggest-search-p-kt").css('display', 'none');
+        $("#hidden-search-p-kt").css('z-index', '-1');
+    }
+
+    function suggestSearch(even) {
+        $value = $(even).val();
+        $value = $value.trim();
+        if ($value) {
+            $(".key_search_suggest").each(function () {
+                $(this).html($value);
+                $parent = $(this).parent();
+                $parent.attr('href', $parent.attr('data-link') + $value);
+            });
+            $("#hidden-search-p-kt").val($value + " Tìm trong showroom");
+            $(".suggest-search-p-kt").css('display', 'block');
+            $("#hidden-search-p-kt").css('z-index', 'inherit');
+
+        } else {
+            $(".key_search_suggest").each(function () {
+                $(this).html($value);
+            });
+            $(".suggest-search-p-kt").css('display', 'none');
+            $("#hidden-search-p-kt").css('z-index', '-1');
+        }
+    }
+
+    function chang_key_hidden_search(even) {
+        $data = $(even).attr('data-url');
+        $("#hidden-search-p-kt").val($value + " Tìm trong " + $data);
+    }
+
+    function chang_key_hidden_search2(even) {
+        $data = $(even).attr('data-url');
+        $("#hidden-search-p-kt").val($value + " Tìm trong showroom");
+    }
+</script>
+
+<style type="text/css">
+    select {
+        text-align-last: right;
+    }
+
+    option {
+        direction: rtl;
     }
 </style>
-<script>
-    function search() {
-        let key_word = $('#key_word').val();
-        let exigency = $('#exigency').val();
-        let kind = $('#kind').val();
-        let project = $('#project').val();
-        let price = $('#price').val();
-        console.log(key_word);
-        console.log(exigency);
-        console.log(kind);
-        console.log(project);
-        console.log(price);
-
-        let base = '/' + 'site/my-search?key_word=' + key_word + '&exigency=' + exigency + '&kind=' + kind + '&project=' + project + '&price=' + price;
-        $("#btnSearch").attr('href', base);
-    };
-</script>
-<!--<script type="text/javascript" src="/theme/js/search.js"></script>-->

@@ -1,0 +1,18 @@
+div.part-6{
+    max-width: 400px;
+    margin: 0 auto;
+}
+.login-them {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    padding: 0 10px 10px 10px;
+    margin: 20px 0;
+}
+.kt-click-a {
+    cursor: pointer;
+    color: #228545 !important;
+}
+button.col-md-12-login {
+    width: 100%;
+}
