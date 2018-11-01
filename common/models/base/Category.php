@@ -26,8 +26,6 @@ use Yii;
  * @property string $images
  * @property int $example
  * @property string $icon
- * @property string $price
- * @property string $address
  *
  * @property Album[] $albums
  * @property Page $page
@@ -59,7 +57,7 @@ class Category extends \yii\db\ActiveRecord
             [['title', 'page_id'], 'required'],
             [['describe', 'content', 'code', 'images'], 'string'],
             [['serial', 'parent_id', 'page_id', 'display_homepage', 'featured', 'status', 'seo_tool_id', 'example'], 'integer'],
-            [['title', 'avatar', 'slug', 'key', 'link', 'icon', 'price', 'address'], 'string', 'max' => 255],
+            [['title', 'avatar', 'slug', 'key', 'link', 'icon'], 'string', 'max' => 255],
             [['page_id'], 'exist', 'skipOnError' => true, 'targetClass' => Page::className(), 'targetAttribute' => ['page_id' => 'id']],
             [['parent_id'], 'exist', 'skipOnError' => true, 'targetClass' => Category::className(), 'targetAttribute' => ['parent_id' => 'id']],
             [['seo_tool_id'], 'exist', 'skipOnError' => true, 'targetClass' => SeoTool::className(), 'targetAttribute' => ['seo_tool_id' => 'id']],
@@ -91,8 +89,6 @@ class Category extends \yii\db\ActiveRecord
             'images' => 'Images',
             'example' => 'Example',
             'icon' => 'Icon',
-            'price' => 'Price',
-            'address' => 'Address',
         ];
     }
 

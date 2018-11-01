@@ -40,7 +40,7 @@ $this->registerMetaTag([
     'property' => 'og:image',
     'content' => Url::to([$general['logo']], true)
 ]);
-$set_banner = FunctionHelper::get_setting_by_key('banner');
+$set_banner = FunctionHelper::get_setting_by_key('ch1');
 $set_community = FunctionHelper::get_setting_by_key('community');
 ?>
 <section>
@@ -170,29 +170,12 @@ $set_community = FunctionHelper::get_setting_by_key('community');
 </section>
 
 <section>
-    <div class="container">
-        <div class="h3 text-center">
-            <h1>
-                KIENTRUC.com có <B>264 KIẾN TRÚC SƯ</B> với
-                <B>1,006 DỰ ÁN</B> trên hệ thống.....
-            </h1>
-        </div>
-        <div class="h3 text-center">
-            Bạn là Kiến Trúc Sư ? <a
-                    href="huong-dan-kientruccom/tro-thanh-kien-truc-su-%2651.html" title=""><span
-                        class="tim-hieu-them">Tìm hiểu thêm</span></a>
-        </div>
-    </div>
-</section>
-
-<section>
     <div class="banner-register">
         <div class="container">
             <div class="form-register">
-                <div class="h3 text-center">CỘNG ĐỒNG HỎI ĐÁP VỀ NHÀ Ở LỚN NHẤT VIỆT NAM</div>
+                <div class="h3 text-center"><?= $set_community['title']?></div>
                 <div class="text-justify wd-70">
-                    Chỉ mất 10s đăng ký để có thể đặt câu hỏi
-                    và nhận câu trả lời từ các kiến trúc sư và nhà thiết kế hàng đầu Việt Nam
+                    <?= $set_community['describe'];?>
                 </div>
                 <p class="text-center">
                     <a href="/signup" title="Đăng ký đặt câu hỏi">
@@ -210,6 +193,8 @@ $set_community = FunctionHelper::get_setting_by_key('community');
                 <img src="image/iphonex.png" alt="no-image" class="img-responsive">
             </div>
         </div>
+
+
     </div>
 </section>
 

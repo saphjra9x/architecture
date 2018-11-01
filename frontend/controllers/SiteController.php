@@ -212,7 +212,21 @@ class SiteController extends Controller
             'pages' => $search['pages'],
         ]);
     }
-
+    public function actionArchitectural(){
+        return $this->render('architectural');
+    }
+    public function actionUpload(){
+        return $this->render('project-upload');
+    }
+    public function actionConfirm(){
+        return $this->render('confirm-project');
+    }
+    public function actionInfo(){
+        return $this->render('info');
+    }
+    public function actionNoting(){
+        return $this->render('noting');
+    }
     /**
      *
      */
