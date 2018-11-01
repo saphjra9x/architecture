@@ -29,6 +29,8 @@ class ThemeAsset extends AssetBundle
         'theme/css/uplevelkts.css',
         'theme/css/customer.css',
         'theme/css/checkbox-x.min.css',
+        'theme/css/ask.css',
+        'theme/css/page-kts.css',
 
 
 

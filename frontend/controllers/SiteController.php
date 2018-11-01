@@ -183,6 +183,9 @@ class SiteController extends Controller
             case 'posting-page':
                 $page = 'posting-page';
                 break;
+            case 'become-an-architect':
+                $page = 'become-an-architect';
+                break;
             case 'project-page':
                 break;
             case 'ad-page':
@@ -227,6 +230,16 @@ class SiteController extends Controller
     public function actionNoting(){
         return $this->render('noting');
     }
+    public function actionTopic(){
+        return $this->render('topic');
+    }
+    public function actionAlbum(){
+        return $this->render('album');
+    }
+    public function actionPassword(){
+        return $this->render('password');
+    }
+
     /**
      *
      */
