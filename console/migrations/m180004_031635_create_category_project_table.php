@@ -3,9 +3,9 @@
 use yii\db\Migration;
 
 /**
- * Handles the creation of table `unit`.
+ * Handles the creation of table `ctegory_project`.
  */
-class m180313_093907_create_unit_table extends Migration
+class m180004_031635_create_category_project_table extends Migration
 {
     /**
      * {@inheritdoc}
@@ -17,8 +17,7 @@ class m180313_093907_create_unit_table extends Migration
             // http://stackoverflow.com/questions/766809/whats-the-difference-between-utf8-general-ci-and-utf8-unicode-ci
             $tableOptions = 'CHARACTER SET utf8 COLLATE utf8_unicode_ci ENGINE=InnoDB';
         }
-
-        $this->createTable('unit', [
+        $this->createTable('category_project', [
             'id' => $this->primaryKey(),
             'title' => $this->string(),
             'status' => $this->integer()->defaultValue(0)
@@ -30,6 +29,6 @@ class m180313_093907_create_unit_table extends Migration
      */
     public function safeDown()
     {
-        $this->dropTable('unit');
+        $this->dropTable('ctegory_project');
     }
 }

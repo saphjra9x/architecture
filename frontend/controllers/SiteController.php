@@ -3,6 +3,7 @@
 namespace frontend\controllers;
 
 use common\models\Classified;
+use common\models\Project;
 use Yii;
 use yii\base\InvalidParamException;
 use yii\web\NotFoundHttpException;
@@ -20,7 +21,7 @@ use frontend\models\SignupForm;
 use frontend\models\ContactForm;
 use common\models\Image;
 use common\models\Category;
-use common\models\Unit;
+use common\models\User;
 
 /**
  * Site controller
@@ -220,6 +221,8 @@ class SiteController extends Controller
     {
         $this->layout = 'register';
         $model = new SignupForm();
+
+
         if ($model->load(Yii::$app->request->post())) {
             if ($user = $model->signup()) {
                 if (Yii::$app->getUser()->login($user)) {
@@ -239,7 +242,7 @@ class SiteController extends Controller
      */
     public function actionLogin()
     {
-        $this->layout = 'login';
+        $this->layout = 'register';
         if (!Yii::$app->user->isGuest) {
             return $this->goHome();
         }
@@ -302,28 +305,6 @@ class SiteController extends Controller
     }
 
     /**
-     * Signs user up.
-     *
-     * @return mixed
-     */
-    public function actionSignup()
-    {
-        $this->layout = 'signup';
-        $model = new SignupForm();
-        if ($model->load(Yii::$app->request->post())) {
-            if ($user = $model->signup()) {
-                if (Yii::$app->getUser()->login($user)) {
-                    return $this->goHome();
-                }
-            }
-        }
-
-        return $this->render('signup', [
-            'model' => $model,
-        ]);
-    }
-
-    /**
      * Requests password reset.
      *
      * @return mixed
@@ -373,32 +354,99 @@ class SiteController extends Controller
         ]);
     }
 
-    public function actionPostNews()
+    /**
+     * @return string|\yii\web\Response
+     */
+    public function actionArchitectural()
     {
-        $model = new Classified();
-        if ($model->load(Yii::$app->request->post())) {
-            if ($model->save()) {
-                if ($model->images) {
-                    foreach (json_decode($model->images) as $key => $value) {
-                        $image = new Image();
-                        $image->avatar = $value;
-                        $image->classified_id = $model->id;
-                        $image->save();
-                    }
-                }
-                $model->slug = FunctionHelper::slug($model->title) . '-' . $model->id;
-                $model->save();
 
-                return $this->redirect(['index']);
+        $model = new SignupForm();
+        $user = null;
 
+        if (!Yii::$app->user->isGuest) {
+            try {
+                $user = $this->findModel(Yii::$app->user->identity->getId());
+            } catch (NotFoundHttpException $e) {
             }
         }
-        return $this->render('postnews',
+
+        $model->username = $user['username'];
+        $model->full_name = $user['full_name'];
+        $model->email = $user['email'];
+
+        if ($model->load(Yii::$app->request->post())) {
+            $user['username'] = $model->username;
+            $user['full_name'] = $model->full_name;
+            $user['phone'] = $model->phone;
+            $user['email'] = $model->email;
+            $user['gender'] = $model->gender;
+            $user['address'] = $model->address;
+            $user['province_id'] = $model->province_id;
+            $user['district_id'] = $model->district_id;
+            $user['commune_id'] = $model->commune_id;
+            $user->save();
+            return $this->redirect(['upload-project']);
+        }
+        return $this->render('architectural',
             [
-                'model' => $model
+                'model' => $model,
+                'user' => $user
+
             ]);
     }
 
+    /**
+     * @return string|\yii\web\Response
+     */
+    public function actionUploadProject()
+    {
+        $project = new Project();
+        $user = null;
+
+        if (!Yii::$app->user->isGuest) {
+            try {
+                $user = $this->findModel(Yii::$app->user->identity->getId());
+            } catch (NotFoundHttpException $e) {
+            }
+        }
+        if ($project->load(Yii::$app->request->post())) {
+
+            $project['user_id'] = $user['id'];
+            if ($project->save()) {
+                if ($project->images) {
+                    foreach (json_decode($project->images) as $key => $value) {
+                        $image = new Image();
+                        $image->avatar = $value;
+                        $image->project_id = $project->id;
+                        $image->save();
+                    }
+                }
+                $project->slug = FunctionHelper::slug($project->title) . '-' . $project->id;
+                $project->save();
+                return $this->redirect(['site/confirm']);
+            }
+
+        }
+        return $this->render('upload-project', [
+            'project' => $project
+        ]);
+
+    }
+
+    public function actionConfirm()
+    {
+        $post = Yii:: $app->request->post();
+        return $this->render('confirm');
+    }
+
+    /**
+     * @param $key_word
+     * @param $exigency
+     * @param $kind
+     * @param $project
+     * @param $price
+     * @return bool|string
+     */
     public function actionMySearch($key_word, $exigency, $kind, $project, $price)
     {
         if (isset($key_word) && isset($exigency) && isset($kind) && isset($project) && isset($price)) {
@@ -439,5 +487,19 @@ class SiteController extends Controller
             ]);
         }
         return false;
+    }
+
+    /**
+     * @param $id
+     * @return User|null
+     * @throws NotFoundHttpException
+     */
+    private function findModel($id)
+    {
+        if (($model = User::findOne($id)) !== null) {
+            return $model;
+        } else {
+            throw new NotFoundHttpException('The requested page does not exist . ');
+        }
     }
 }

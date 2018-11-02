@@ -26,6 +26,7 @@ use Yii;
  * @property int $tab_id
  * @property int $status
  * @property string $code
+ * @property int $project_id
  *
  * @property Album $album
  * @property Category $category
@@ -33,6 +34,7 @@ use Yii;
  * @property PhotoLocation $photoLocation
  * @property Post $post
  * @property Product $product
+ * @property Project $project
  * @property Setting $setting
  * @property Tab $tab
  */
@@ -53,7 +55,7 @@ class Image extends \yii\db\ActiveRecord
     {
         return [
             [['avatar'], 'required'],
-            [['photo_location_id', 'serial', 'featured', 'post_id', 'album_id', 'category_id', 'product_id', 'classified_id', 'setting_id', 'tab_id', 'status'], 'integer'],
+            [['photo_location_id', 'serial', 'featured', 'post_id', 'album_id', 'category_id', 'product_id', 'classified_id', 'setting_id', 'tab_id', 'status', 'project_id'], 'integer'],
             [['describe', 'content', 'code'], 'string'],
             [['title', 'avatar', 'sub_photo', 'link'], 'string', 'max' => 255],
             [['album_id'], 'exist', 'skipOnError' => true, 'targetClass' => Album::className(), 'targetAttribute' => ['album_id' => 'id']],
@@ -62,6 +64,7 @@ class Image extends \yii\db\ActiveRecord
             [['photo_location_id'], 'exist', 'skipOnError' => true, 'targetClass' => PhotoLocation::className(), 'targetAttribute' => ['photo_location_id' => 'id']],
             [['post_id'], 'exist', 'skipOnError' => true, 'targetClass' => Post::className(), 'targetAttribute' => ['post_id' => 'id']],
             [['product_id'], 'exist', 'skipOnError' => true, 'targetClass' => Product::className(), 'targetAttribute' => ['product_id' => 'id']],
+            [['project_id'], 'exist', 'skipOnError' => true, 'targetClass' => Project::className(), 'targetAttribute' => ['project_id' => 'id']],
             [['setting_id'], 'exist', 'skipOnError' => true, 'targetClass' => Setting::className(), 'targetAttribute' => ['setting_id' => 'id']],
             [['tab_id'], 'exist', 'skipOnError' => true, 'targetClass' => Tab::className(), 'targetAttribute' => ['tab_id' => 'id']],
         ];
@@ -92,6 +95,7 @@ class Image extends \yii\db\ActiveRecord
             'tab_id' => 'Tab ID',
             'status' => 'Status',
             'code' => 'Code',
+            'project_id' => 'Project ID',
         ];
     }
 
@@ -141,6 +145,14 @@ class Image extends \yii\db\ActiveRecord
     public function getProduct()
     {
         return $this->hasOne(Product::className(), ['id' => 'product_id']);
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getProject()
+    {
+        return $this->hasOne(Project::className(), ['id' => 'project_id']);
     }
 
     /**

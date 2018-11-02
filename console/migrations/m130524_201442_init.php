@@ -35,7 +35,7 @@ class m130524_201442_init extends Migration
             'follow_number' => $this->integer(),
             'birthday' => $this->dateTime(),
             'permission' => $this->integer()->defaultValue(0),
-            'status' => $this->smallInteger()->notNull()->defaultValue(10),
+            'status' => $this->integer()->notNull()->defaultValue(10),
             'created_at' => $this->integer()->notNull(),
             'updated_at' => $this->integer()->notNull(),
             'fb_link' => $this->string()->unique(),
