@@ -59,12 +59,6 @@ $domain = str_replace('admin/../..', '', Url::to(['@domain'], true));
                             )->label('Danh mục cha') ?>
                         </div>
                         <div class="form-group">
-                            <?= $form->field($model, 'price')->textInput()->label('Giá từ') ?>
-                        </div>
-                        <div class="form-group">
-                            <?= $form->field($model, 'address')->textInput()->label('Địa chỉ') ?>
-                        </div>
-                        <div class="form-group">
                             <?= $form->field($model, 'describe')->textarea(['id' => 'describe'])->label('Mô tả') ?>
                         </div>
                         <div class="clearfix"></div>

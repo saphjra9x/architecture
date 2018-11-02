@@ -176,14 +176,6 @@ $fb = FunctionHelper::get_general_information()['page_facebook'];
     gtag('config', 'UA-124644846-1');
 </script>
 
-<script src="assets/20c8f6c6/jquery.js"></script>
-<script src="assets/6b5faf4f/yii.js"></script>
-<script src="assets/df57fb5c/js/bootstrap.js"></script>
-<script src="assets/464aa278/jquery.slimscroll.min.js"></script>
-<script src="library/jquery.easeScroll.js"></script>
-<script src="library/jquery-loading-master/dist/jquery.loading.min.js"></script>
-<script src="js/javaSlide.js"></script>
-<script src="js/javaChung.js"></script>
 <script>jQuery(function ($) {
 
         $(function ($) {

@@ -183,6 +183,9 @@ class SiteController extends Controller
             case 'posting-page':
                 $page = 'posting-page';
                 break;
+            case 'become-an-architect':
+                $page = 'become-an-architect';
+                break;
             case 'project-page':
                 break;
             case 'ad-page':
@@ -211,6 +214,30 @@ class SiteController extends Controller
             'products' => $search['search'],
             'pages' => $search['pages'],
         ]);
+    }
+    public function actionArchitectural(){
+        return $this->render('architectural');
+    }
+    public function actionUpload(){
+        return $this->render('project-upload');
+    }
+    public function actionConfirm(){
+        return $this->render('confirm-project');
+    }
+    public function actionInfo(){
+        return $this->render('info');
+    }
+    public function actionNoting(){
+        return $this->render('noting');
+    }
+    public function actionTopic(){
+        return $this->render('topic');
+    }
+    public function actionAlbum(){
+        return $this->render('album');
+    }
+    public function actionPassword(){
+        return $this->render('password');
     }
 
     /**
