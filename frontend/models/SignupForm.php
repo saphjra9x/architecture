@@ -23,6 +23,8 @@ class SignupForm extends Model
     public $province_id;
     public $district_id;
     public $commune_id;
+    public $avatar;
+    public $birthday;
 
     /**
      * {@inheritdoc}
@@ -38,12 +40,13 @@ class SignupForm extends Model
             ['email', 'trim'],
             ['email', 'required'],
             ['email', 'email'],
-            [['province_id', 'district_id','commune_id'],'integer'],
-            ['address','string'],
+            [['province_id', 'district_id', 'commune_id'], 'integer'],
+            ['address', 'string'],
             [['email', 'full_name'], 'string', 'max' => 255],
             ['email', 'unique', 'targetClass' => '\common\models\User', 'message' => 'This email address has already been taken.'],
             ['phone', 'integer'],
-            ['gender', 'string'],
+            ['birthday', 'safe'],
+            [['gender', 'avatar'], 'string'],
             ['password', 'required'],
             ['password', 'string', 'min' => 6],
         ];

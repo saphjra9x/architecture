@@ -12,18 +12,34 @@ class ThemeAsset extends AssetBundle
     public $basePath = '@webroot';
     public $baseUrl = '@web';
     public $css = [
+//        'theme/css/bootstrap.css',
+//        'theme/css/font-awesome.min.css',
+//        'theme/css/index.css',
+//        'theme/css/jquery.loading.min.css',
+//        'theme/css/uplevelkts.css',
+//        'theme/css/fileinput.min.css',
+//        'theme/css/bootstrap-toggle.min.css',
+//        'theme/css/select2-krajee.min.css',
+//        'theme/css/select2.min.css',
+//        'theme/css/select2-addl.min.css',
+//        'theme/css/kv-widgets.min.css',
+//        'theme/css/dependent-dropdown.min.css',
+
+        'theme/css/css.css',
+        'theme/css/css(1).css',
         'theme/css/bootstrap.css',
-        'theme/css/font-awesome.min.css',
-        'theme/css/index.css',
-        'theme/css/jquery.loading.min.css',
-        'theme/css/uplevelkts.css',
-        'theme/css/fileinput.min.css',
-        'theme/css/bootstrap-toggle.min.css',
-        'theme/css/select2-krajee.min.css',
-        'theme/css/select2.min.css',
-        'theme/css/select2-addl.min.css',
         'theme/css/kv-widgets.min.css',
         'theme/css/dependent-dropdown.min.css',
+        'theme/css/font-awesome.min.css',
+        'theme/css/index.css',
+        'theme/css/fileinput.min.css',
+        'theme/css/bootstrap-toggle.min.css',
+        'theme/css/jquery.loading.min.css',
+        'theme/css/uplevelkts.css',
+        'theme/css/customer1.css',
+        'theme/css/checkbox-x.min.css',
+        'theme/css/page-kts.css',
+        'theme/css/croppie.css',
 
     ];
     public $js = [
@@ -35,6 +51,10 @@ class ThemeAsset extends AssetBundle
         'theme/js/jquery.loading.min.js',
         'theme/js/javaSlide.js',
         'theme/js/javaChung.js',
+        'theme/js/select2.full.min.js',
+        'theme/js/select2-krajee.min.js',
+        'theme/js/kv-widgets.min.js',
+        'theme/js/croppie.js',
 
     ];
     public $depends = [

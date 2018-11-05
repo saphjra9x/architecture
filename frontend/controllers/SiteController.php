@@ -184,6 +184,9 @@ class SiteController extends Controller
             case 'posting-page':
                 $page = 'posting-page';
                 break;
+            case 'become-an-architect':
+                $page = 'become-an-architect';
+                break;
             case 'project-page':
                 break;
             case 'ad-page':
@@ -215,7 +218,7 @@ class SiteController extends Controller
     }
 
     /**
-     *
+     * @return string|\yii\web\Response
      */
     public function actionRegister()
     {
@@ -433,10 +436,66 @@ class SiteController extends Controller
 
     }
 
+    /**
+     * @return string
+     */
     public function actionConfirm()
     {
-        $post = Yii:: $app->request->post();
         return $this->render('confirm');
+    }
+
+    public function actionInfoUser()
+    {
+        $model = new SignupForm();
+        $user = null;
+
+        if (!Yii::$app->user->isGuest) {
+            try {
+                $user = $this->findModel(Yii::$app->user->identity->getId());
+            } catch (NotFoundHttpException $e) {
+            }
+        }
+        $model->full_name = $user['full_name'];
+        $model->email = $user['email'];
+        $model->phone = $user['phone'];
+        $model->avatar = $user['avatar'];
+        $model->permission = $user['permission'];
+        if ($model->load(Yii::$app->request->post())) {
+            $user['full_name'] = $model->full_name;
+            $user['phone'] = $model->phone;
+            $user['email'] = $model->email;
+            $user['avatar'] = $model->avatar;
+            $user['birthday'] = $model->birthday;
+            $user['gender'] = $model->gender;
+            $user['province_id'] = $model->province_id;
+            $user['district_id'] = $model->district_id;
+            $user['commune_id'] = $model->commune_id;
+            $user->save();
+        }
+
+        return $this->render('info-user', [
+            'model' => $model
+        ]);
+    }
+
+    public function actionNoting()
+    {
+        return $this->render('noting');
+    }
+
+    public function actionPersonalPage()
+    {
+        return $this->render('personal-page');
+    }
+
+    public function actionAlbum()
+    {
+        return $this->render('album');
+    }
+
+    public function actionPassword()
+    {
+        return $this->render('password');
     }
 
     /**

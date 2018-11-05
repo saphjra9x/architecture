@@ -158,7 +158,7 @@ class AjaxController extends Controller
                 $image = new Image();
 
                 $image->title = FunctionHelper::slug($value);
-                $image->avatar = '/uploads/advertises/' . FunctionHelper::slug($value);
+                $image->avatar = '/uploads/advertises/' .$value;
                 $image->status = 1;
                 $image[$post['column_parent_id']] = $post['id'];
 

@@ -76,9 +76,7 @@ use common\models\Commune;
                     </div>
                 </div>
             </div>
-
             <div class="clearfix"></div>
-
             <div class="col-md-6 col-md-offset-3">
                 <div id="p0" data-pjax-container="" data-pjax-push-state="" data-pjax-timeout="1000">
                     <?php $form = ActiveForm::begin(); ?>
@@ -974,11 +972,8 @@ use common\models\Commune;
                             }
 
                         </script>
-                        <button type="button" class="btn btn-default" onclick="js:getThongTinMaps()">
-                            Đến vị trí theo địa chỉ nhập
-                        </button>
                         <div class="form-group">
-                            <div class="text-right col-md-12">
+                            <div class="text-right col-md-12" style="margin-bottom: 15px">
                                 <button type="submit" class="btn btn-success" name="login-button">Lưu thông tin</button>
                             </div>
                         </div>

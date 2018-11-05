@@ -1,6 +1,6 @@
 <?php
 
-namespace common\models\base;
+namespace app\models;
 
 use Yii;
 
@@ -70,25 +70,25 @@ class Category extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'id' => 'ID',
-            'title' => 'Title',
-            'avatar' => 'Avatar',
-            'describe' => 'Describe',
-            'serial' => 'Serial',
-            'parent_id' => 'Parent ID',
-            'content' => 'Content',
-            'page_id' => 'Page ID',
-            'display_homepage' => 'Display Homepage',
-            'featured' => 'Featured',
-            'status' => 'Status',
-            'seo_tool_id' => 'Seo Tool ID',
-            'slug' => 'Slug',
-            'key' => 'Key',
-            'code' => 'Code',
-            'link' => 'Link',
-            'images' => 'Images',
-            'example' => 'Example',
-            'icon' => 'Icon',
+            'id' => Yii::t('app', 'ID'),
+            'title' => Yii::t('app', 'Title'),
+            'avatar' => Yii::t('app', 'Avatar'),
+            'describe' => Yii::t('app', 'Describe'),
+            'serial' => Yii::t('app', 'Serial'),
+            'parent_id' => Yii::t('app', 'Parent ID'),
+            'content' => Yii::t('app', 'Content'),
+            'page_id' => Yii::t('app', 'Page ID'),
+            'display_homepage' => Yii::t('app', 'Display Homepage'),
+            'featured' => Yii::t('app', 'Featured'),
+            'status' => Yii::t('app', 'Status'),
+            'seo_tool_id' => Yii::t('app', 'Seo Tool ID'),
+            'slug' => Yii::t('app', 'Slug'),
+            'key' => Yii::t('app', 'Key'),
+            'code' => Yii::t('app', 'Code'),
+            'link' => Yii::t('app', 'Link'),
+            'images' => Yii::t('app', 'Images'),
+            'example' => Yii::t('app', 'Example'),
+            'icon' => Yii::t('app', 'Icon'),
         ];
     }
 

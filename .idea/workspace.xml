@@ -2,25 +2,66 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="30015a21-8813-4469-b522-e1fe35b9e3ca" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/backend/models/Category.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/views/site/album.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/views/site/become-an-architect.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/views/site/confirm-project.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/views/site/info-user.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/views/site/noting.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/views/site/password.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/views/site/project-upload.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/views/site/topic.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/web/img/200x200no-image.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/web/img/banner-chu-nha-04.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/web/theme/css/ask.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/web/theme/css/checkbox-x.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/web/theme/css/css(1).css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/web/theme/css/css.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/web/theme/css/page-kts.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/web/theme/js/bootstrap-toggle.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/web/theme/js/checkbox-x.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/web/theme/js/common.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/web/theme/js/controls.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/web/theme/js/depdrop.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/web/theme/js/dependent-dropdown.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/web/theme/js/fileinput.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/web/theme/js/geometry.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/web/theme/js/infowindow.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/web/theme/js/jquery.inputmask.bundle.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/web/theme/js/js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/web/theme/js/kv-widgets.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/web/theme/js/map.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/web/theme/js/marker.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/web/theme/js/onion.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/web/theme/js/poly.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/web/theme/js/project.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/web/theme/js/purify.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/web/theme/js/select2-krajee.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/web/theme/js/select2.full.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/web/theme/js/sortable.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/web/theme/js/stats.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/web/theme/js/util.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/web/theme/js/vi.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/web/theme/js/yii.activeForm.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/web/theme/js/yii.validation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/controllers/AjaxController.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/controllers/AjaxController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/controllers/ProvinceController.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/controllers/ProvinceController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/helpers/FunctionHelper.php" beforeDir="false" afterPath="$PROJECT_DIR$/common/helpers/FunctionHelper.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/common/models/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/models/base/Image.php" beforeDir="false" afterPath="$PROJECT_DIR$/common/models/base/Image.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/models/base/Project.php" beforeDir="false" afterPath="$PROJECT_DIR$/common/models/base/Project.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/console/migrations/m130524_201442_init.php" beforeDir="false" afterPath="$PROJECT_DIR$/console/migrations/m130524_201442_init.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/console/migrations/m180005_081912_create_project_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/console/migrations/m180005_081912_create_project_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/console/migrations/m180313_093907_create_unit_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/console/migrations/m180005_073907_create_unit_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/views/category/_form.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/views/category/_form.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/models/base/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/common/models/base/Category.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/assets/ThemeAsset.php" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/assets/ThemeAsset.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/config/main.php" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/config/main.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/controllers/SiteController.php" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/controllers/SiteController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/models/SignupForm.php" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/models/SignupForm.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/views/layouts/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/layouts/footer.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/views/layouts/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/layouts/header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/views/layouts/main.php" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/layouts/main.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/views/site/about.php" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/site/about.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/views/site/architectural.php" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/site/architectural.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/views/site/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/site/login.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/views/site/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/site/register.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/views/site/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/site/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/views/site/postnews.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/web/theme/css/bootstrap.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/web/theme/css/bootstrap.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/web/theme/css/font-awesome.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/web/theme/css/font-awesome.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/web/theme/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/web/theme/css/index.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -51,8 +92,8 @@
       <file leaf-file-name="SiteController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/frontend/controllers/SiteController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="725">
-              <caret line="438" selection-start-line="438" selection-end-line="438" />
+            <state relative-caret-position="11000">
+              <caret line="459" column="39" selection-start-line="459" selection-start-column="39" selection-end-line="459" selection-end-column="39" />
               <folding>
                 <element signature="e#40#69#0#PHP" expanded="true" />
               </folding>
@@ -63,24 +104,8 @@
       <file leaf-file-name="upload-project.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/frontend/views/site/upload-project.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="242">
-              <caret line="1448" column="43" selection-start-line="1448" selection-start-column="15" selection-end-line="1448" selection-end-column="43" />
-              <folding>
-                <element signature="e#76#103#0#PHP" expanded="true" />
-                <element signature="n#form#0;n#div#2;n#div#0;n#div#0;n#section#1;n#!!top" />
-                <element signature="n#div#4;n#form#0;n#div#2;n#div#0;n#div#0;n#section#1;n#!!top" />
-                <element signature="n#script#0;n#form#0;n#div#2;n#div#0;n#div#0;n#section#1;n#!!top" />
-                <element signature="n#style#0;n#b#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="architectural.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/frontend/views/site/architectural.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="707">
-              <caret line="1006" column="140" selection-start-line="1006" selection-end-line="1006" selection-end-column="140" />
+            <state relative-caret-position="35150">
+              <caret line="1421" column="34" selection-start-line="1421" selection-start-column="34" selection-end-line="1421" selection-end-column="34" />
               <folding>
                 <element signature="e#76#103#0#PHP" expanded="true" />
               </folding>
@@ -88,34 +113,32 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="confirm.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/frontend/views/site/confirm.php">
+      <file leaf-file-name="_form.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/backend/views/post/_form.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="71">
-              <caret line="113" column="22" lean-forward="true" selection-start-line="113" selection-start-column="22" selection-end-line="113" selection-end-column="22" />
+            <state relative-caret-position="7225">
+              <caret line="295" column="119" selection-start-line="295" selection-start-column="42" selection-end-line="295" selection-end-column="119" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="info-user.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/frontend/views/site/info-user.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="400">
+              <caret line="26" column="87" selection-start-line="26" selection-start-column="87" selection-end-line="26" selection-end-column="87" />
               <folding>
-                <element signature="e#7#27#0#PHP" expanded="true" />
-                <element signature="e#2631#2637#0#HTML" expanded="true" />
-                <element signature="e#2935#2941#0#HTML" expanded="true" />
-                <element signature="e#3129#3135#0#HTML" expanded="true" />
-                <element signature="e#3847#3853#0#HTML" expanded="true" />
-                <element signature="e#3853#3859#0#HTML" expanded="true" />
-                <element signature="e#3939#3945#0#HTML" expanded="true" />
-                <element signature="e#4058#4064#0#HTML" expanded="true" />
-                <element signature="e#4105#4111#0#HTML" expanded="true" />
-                <element signature="e#4224#4230#0#HTML" expanded="true" />
-                <element signature="e#4311#4317#0#HTML" expanded="true" />
-                <element signature="n#style#0;n#p#0;n#div#0;n#div#1;n#form#0;n#div#0;n#div#2;n#div#0;n#div#0;n#section#1;n#!!top" expanded="true" />
+                <element signature="e#105#132#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="header.php" pinned="false" current-in-tab="true">
-        <entry file="file://$USER_HOME$/AppData/Local/Temp/scp47313/home/hungnq/public_html/realestatevietnam.site/frontend/views/layouts/header.php">
+      <file leaf-file-name="SignupForm.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/frontend/models/SignupForm.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="257">
-              <caret line="12" column="73" selection-start-line="12" selection-start-column="42" selection-end-line="12" selection-end-column="73" />
+            <state relative-caret-position="100">
+              <caret line="26" column="21" selection-start-line="26" selection-start-column="21" selection-end-line="26" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -124,12 +147,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>kc-elm kc-css-301987 kc_row no-space-row</find>
-      <find>DVLoggerClient.js</find>
-      <find>src=&quot;</find>
-      <find>.css</find>
-      <find>type=&quot;text/javascript&quot;&gt;</find>
-      <find>$category[4]</find>
       <find>get_post_by_category_slug</find>
       <find>get_pos</find>
       <find>div#header</find>
@@ -154,6 +171,12 @@
       <find>Title không được để trống.</find>
       <find>glyphicon glyphicon-trash</find>
       <find>show_categories_nestable</find>
+      <find>get_setting_by_key</find>
+      <find>$matbang</find>
+      <find>user</find>
+      <find>$user</find>
+      <find>L-right</find>
+      <find>dang-ky</find>
     </findStrings>
     <replaceStrings>
       <replace>filemain</replace>
@@ -181,16 +204,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/backend/web/cms/components/ckeditor/config.js" />
-        <option value="$USER_HOME$/AppData/Local/Temp/scp38017/home/thanhtv/public_html/vincitys-gialam.com.vn/frontend/views/layouts/footer.php" />
-        <option value="$PROJECT_DIR$/frontend/views/site/index.php" />
-        <option value="$PROJECT_DIR$/frontend/views/layouts/register.php" />
-        <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/common/models/User.php" />
-        <option value="$USER_HOME$/AppData/Local/Temp/scp58732/home/senior/public_html/tuan123land.com/common/helpers/FunctionHelper.php" />
-        <option value="$USER_HOME$/AppData/Local/Temp/scp44949/home/senior/public_html/tuan123land.com/frontend/views/site/index.php" />
-        <option value="$USER_HOME$/AppData/Local/Temp/scp44187/home/hungnq1/public_html/bietthu-sailingphuquoc.com/frontend/views/layouts/main.php" />
-        <option value="$USER_HOME$/AppData/Local/Temp/scp20556/home/hungnq/public_html/dautubdsnghiduongvn.com/frontend/views/layouts/header.php" />
         <option value="$USER_HOME$/AppData/Local/Temp/scp25836/home/hungnq/public_html/dautubdsnghiduongvn.com/frontend/web/theme/css/autoptimize_cf6d48da66a3159fa382dc700b6873fb.css" />
         <option value="$USER_HOME$/AppData/Local/Temp/scp33556/home/hungnq/public_html/dautubdsnghiduongvn.com/frontend/views/layouts/footer.php" />
         <option value="$USER_HOME$/AppData/Local/Temp/scp33700/home/hungnq/public_html/dautubdsnghiduongvn.com/frontend/views/site/index.php" />
@@ -199,7 +212,6 @@
         <option value="$PROJECT_DIR$/console/migrations/m130524_201442_init.php" />
         <option value="$PROJECT_DIR$/common/models/base/User.php" />
         <option value="$USER_HOME$/AppData/Local/Temp/scp04732/home/hungnq1/public_html/vingroups.com.vn/frontend/views/layouts/main.php" />
-        <option value="$PROJECT_DIR$/frontend/views/layouts/header.php" />
         <option value="$PROJECT_DIR$/frontend/views/layouts/main.php" />
         <option value="$PROJECT_DIR$/frontend/views/site/login.php" />
         <option value="$PROJECT_DIR$/frontend/views/site/register.php" />
@@ -212,12 +224,9 @@
         <option value="$PROJECT_DIR$/backend/controllers/ProvinceController.php" />
         <option value="$PROJECT_DIR$/backend/controllers/AjaxController.php" />
         <option value="$USER_HOME$/AppData/Local/Temp/scp00591/home/hungnq1/public_html/phuonghoangparis.com/frontend/views/layouts/main.php" />
-        <option value="$PROJECT_DIR$/frontend/models/SignupForm.php" />
         <option value="$PROJECT_DIR$/console/migrations/m180004_031635_create_category_project_table.php" />
-        <option value="$PROJECT_DIR$/frontend/assets/ThemeAsset.php" />
         <option value="$PROJECT_DIR$/common/helpers/FunctionHelper.php" />
         <option value="$USER_HOME$/AppData/Local/Temp/scp26313/home/hungnq/public_html/caodangduocdhn.edu.vn/frontend/views/layouts/main.php" />
-        <option value="$PROJECT_DIR$/frontend/views/site/architectural.php" />
         <option value="$PROJECT_DIR$/console/migrations/m181101_064842_update_images_table.php" />
         <option value="$PROJECT_DIR$/console/migrations/m181101_032019_update_project_table.php" />
         <option value="$PROJECT_DIR$/console/migrations/m181101_041950_update_project_table.php" />
@@ -227,11 +236,25 @@
         <option value="$PROJECT_DIR$/frontend/views/site/upload-project.php" />
         <option value="$PROJECT_DIR$/console/migrations/m180005_081912_create_project_table.php" />
         <option value="$USER_HOME$/AppData/Local/Temp/scp52199/home/hungnq2/public_html/Vingroupcuasothatinh.com/common/config/main-local.php" />
-        <option value="$PROJECT_DIR$/frontend/controllers/SiteController.php" />
         <option value="$USER_HOME$/AppData/Local/Temp/scp44154/home/hungnq1/public_html/diamondlotus.co/common/helpers/FunctionHelper.php" />
         <option value="$USER_HOME$/AppData/Local/Temp/scp57436/home/hungnq1/public_html/diamondlotus.co/frontend/views/site/index.php" />
         <option value="$PROJECT_DIR$/frontend/views/site/confirm.php" />
         <option value="$USER_HOME$/AppData/Local/Temp/scp47313/home/hungnq/public_html/realestatevietnam.site/frontend/views/layouts/header.php" />
+        <option value="$USER_HOME$/AppData/Local/Temp/scp41425/home/hungnq1/public_html/152dienbienphu.com/frontend/views/site/index.php" />
+        <option value="$PROJECT_DIR$/frontend/views/site/info.php" />
+        <option value="$PROJECT_DIR$/frontend/views/site/architectural.php" />
+        <option value="$PROJECT_DIR$/frontend/views/layouts/header.php" />
+        <option value="$USER_HOME$/AppData/Local/Temp/scp09358/home/hungnq/public_html/realestatevietnam.site/frontend/views/site/news-page.php" />
+        <option value="$USER_HOME$/AppData/Local/Temp/scp55845/home/hungnq/public_html/realestatevietnam.site/frontend/views/layouts/main.php" />
+        <option value="$PROJECT_DIR$/frontend/assets/ThemeAsset.php" />
+        <option value="$PROJECT_DIR$/frontend/views/site/info-user.php" />
+        <option value="$PROJECT_DIR$/frontend/controllers/SiteController.php" />
+        <option value="$USER_HOME$/AppData/Local/Temp/scp15181/home/hungnq/public_html/realestatevietnam.site/frontend/views/layouts/footer.php" />
+        <option value="$USER_HOME$/AppData/Local/Temp/scp20005/home/hungnq/public_html/realestatevietnam.site/frontend/views/site/sidebar-botton.php" />
+        <option value="$USER_HOME$/AppData/Local/Temp/scp12011/home/hungnq/public_html/realestatevietnam.site/frontend/web/Content/css/responsive.css" />
+        <option value="$USER_HOME$/AppData/Local/Temp/scp20149/home/hungnq/public_html/realestatevietnam.site/frontend/views/site/index.php" />
+        <option value="$USER_HOME$/AppData/Local/Temp/scp13141/home/hungnq/public_html/realestatevietnam.site/backend/controllers/AjaxController.php" />
+        <option value="$PROJECT_DIR$/frontend/models/SignupForm.php" />
       </list>
     </option>
   </component>
@@ -250,35 +273,10 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
-      <path value="$PROJECT_DIR$/vendor/symfony/console" />
-      <path value="$PROJECT_DIR$/vendor/symfony/css-selector" />
-      <path value="$PROJECT_DIR$/vendor/phpunit/phpunit-mock-objects" />
-      <path value="$PROJECT_DIR$/vendor/phpunit/php-code-coverage" />
-      <path value="$PROJECT_DIR$/vendor/phpunit/phpunit" />
-      <path value="$PROJECT_DIR$/vendor/phpunit/php-file-iterator" />
-      <path value="$PROJECT_DIR$/vendor/phpunit/php-timer" />
-      <path value="$PROJECT_DIR$/vendor/phpunit/php-text-template" />
-      <path value="$PROJECT_DIR$/vendor/phpunit/php-token-stream" />
-      <path value="$PROJECT_DIR$/vendor/phpspec/php-diff" />
       <path value="$PROJECT_DIR$/vendor/container-interop/container-interop" />
-      <path value="$PROJECT_DIR$/vendor/phpspec/prophecy" />
-      <path value="$PROJECT_DIR$/vendor/phpdocumentor/reflection-common" />
-      <path value="$PROJECT_DIR$/vendor/mirocow/yii2-minify-view" />
-      <path value="$PROJECT_DIR$/vendor/matthiasmullie/minify" />
-      <path value="$PROJECT_DIR$/vendor/monolog/monolog" />
-      <path value="$PROJECT_DIR$/vendor/matthiasmullie/path-converter" />
-      <path value="$PROJECT_DIR$/vendor/myclabs/deep-copy" />
-      <path value="$PROJECT_DIR$/vendor/tubalmartin/cssmin" />
-      <path value="$PROJECT_DIR$/vendor/intervention/httpauth" />
-      <path value="$PROJECT_DIR$/vendor/phpdocumentor/reflection-docblock" />
-      <path value="$PROJECT_DIR$/vendor/gkralik/php-uglifyjs" />
-      <path value="$PROJECT_DIR$/vendor/phpdocumentor/type-resolver" />
       <path value="$PROJECT_DIR$/vendor/codeception/verify" />
       <path value="$PROJECT_DIR$/vendor/codeception/base" />
-      <path value="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer" />
-      <path value="$PROJECT_DIR$/vendor/mrclay/props-dic" />
       <path value="$PROJECT_DIR$/vendor/bower-asset/jquery" />
-      <path value="$PROJECT_DIR$/vendor/pimple/pimple" />
       <path value="$PROJECT_DIR$/vendor/bower-asset/inputmask" />
       <path value="$PROJECT_DIR$/vendor/codeception/phpunit-wrapper" />
       <path value="$PROJECT_DIR$/vendor/codeception/stub" />
@@ -286,51 +284,76 @@
       <path value="$PROJECT_DIR$/vendor/bower-asset/typeahead.js" />
       <path value="$PROJECT_DIR$/vendor/ezyang/htmlpurifier" />
       <path value="$PROJECT_DIR$/vendor/bower-asset/punycode" />
-      <path value="$PROJECT_DIR$/vendor/mrclay/jsmin-php" />
       <path value="$PROJECT_DIR$/vendor/bower-asset/yii2-pjax" />
-      <path value="$PROJECT_DIR$/vendor/mrclay/minify" />
       <path value="$PROJECT_DIR$/vendor/bower-asset/bootstrap" />
       <path value="$PROJECT_DIR$/vendor/cebe/markdown" />
-      <path value="$PROJECT_DIR$/vendor/guzzlehttp/psr7" />
-      <path value="$PROJECT_DIR$/vendor/psr/container" />
-      <path value="$PROJECT_DIR$/vendor/psr/http-message" />
-      <path value="$PROJECT_DIR$/vendor/psr/log" />
-      <path value="$PROJECT_DIR$/vendor/psr/simple-cache" />
       <path value="$PROJECT_DIR$/vendor/fzaninotto/faker" />
-      <path value="$PROJECT_DIR$/vendor/sebastian/code-unit-reverse-lookup" />
-      <path value="$PROJECT_DIR$/vendor/sebastian/diff" />
-      <path value="$PROJECT_DIR$/vendor/sebastian/version" />
-      <path value="$PROJECT_DIR$/vendor/webmozart/assert" />
-      <path value="$PROJECT_DIR$/vendor/sebastian/exporter" />
-      <path value="$PROJECT_DIR$/vendor/sebastian/recursion-context" />
-      <path value="$PROJECT_DIR$/vendor/sebastian/object-enumerator" />
-      <path value="$PROJECT_DIR$/vendor/sebastian/resource-operations" />
-      <path value="$PROJECT_DIR$/vendor/sebastian/global-state" />
-      <path value="$PROJECT_DIR$/vendor/sebastian/comparator" />
-      <path value="$PROJECT_DIR$/vendor/sebastian/environment" />
-      <path value="$PROJECT_DIR$/vendor/ralouphie/getallheaders" />
       <path value="$PROJECT_DIR$/vendor/composer" />
-      <path value="$PROJECT_DIR$/vendor/phpoffice/phpspreadsheet" />
       <path value="$PROJECT_DIR$/vendor/fproject/yii2-common" />
       <path value="$PROJECT_DIR$/vendor/fproject/php-common" />
-      <path value="$PROJECT_DIR$/vendor/markbaker/complex" />
-      <path value="$PROJECT_DIR$/vendor/phpmailer/phpmailer" />
       <path value="$PROJECT_DIR$/vendor/doctrine/instantiator" />
-      <path value="$PROJECT_DIR$/vendor/yiisoft/yii2-debug" />
-      <path value="$PROJECT_DIR$/vendor/yiisoft/yii2-gii" />
-      <path value="$PROJECT_DIR$/vendor/yiisoft/yii2-swiftmailer" />
-      <path value="$PROJECT_DIR$/vendor/yiisoft/yii2" />
-      <path value="$PROJECT_DIR$/vendor/yiisoft/yii2-bootstrap" />
-      <path value="$PROJECT_DIR$/vendor/yiisoft/yii2-faker" />
-      <path value="$PROJECT_DIR$/vendor/yiisoft/yii2-composer" />
+      <path value="$PROJECT_DIR$/vendor/mrclay/props-dic" />
+      <path value="$PROJECT_DIR$/vendor/mrclay/jsmin-php" />
+      <path value="$PROJECT_DIR$/vendor/mrclay/minify" />
+      <path value="$PROJECT_DIR$/vendor/phpdocumentor/reflection-common" />
+      <path value="$PROJECT_DIR$/vendor/phpdocumentor/reflection-docblock" />
+      <path value="$PROJECT_DIR$/vendor/phpdocumentor/type-resolver" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/comparator" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/code-unit-reverse-lookup" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/diff" />
+      <path value="$PROJECT_DIR$/vendor/markbaker/complex" />
+      <path value="$PROJECT_DIR$/vendor/myclabs/deep-copy" />
+      <path value="$PROJECT_DIR$/vendor/intervention/httpauth" />
+      <path value="$PROJECT_DIR$/vendor/matthiasmullie/minify" />
+      <path value="$PROJECT_DIR$/vendor/matthiasmullie/path-converter" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-file-iterator" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-token-stream" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/phpunit-mock-objects" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-timer" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-text-template" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-code-coverage" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/phpunit" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/exporter" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/environment" />
+      <path value="$PROJECT_DIR$/vendor/ralouphie/getallheaders" />
+      <path value="$PROJECT_DIR$/vendor/psr/http-message" />
+      <path value="$PROJECT_DIR$/vendor/psr/log" />
+      <path value="$PROJECT_DIR$/vendor/psr/container" />
+      <path value="$PROJECT_DIR$/vendor/psr/simple-cache" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/object-enumerator" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/global-state" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/resource-operations" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/version" />
+      <path value="$PROJECT_DIR$/vendor/pimple/pimple" />
+      <path value="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/recursion-context" />
+      <path value="$PROJECT_DIR$/vendor/symfony/console" />
+      <path value="$PROJECT_DIR$/vendor/symfony/css-selector" />
       <path value="$PROJECT_DIR$/vendor/symfony/browser-kit" />
-      <path value="$PROJECT_DIR$/vendor/symfony/dom-crawler" />
-      <path value="$PROJECT_DIR$/vendor/symfony/finder" />
-      <path value="$PROJECT_DIR$/vendor/symfony/yaml" />
       <path value="$PROJECT_DIR$/vendor/symfony/debug" />
+      <path value="$PROJECT_DIR$/vendor/symfony/finder" />
       <path value="$PROJECT_DIR$/vendor/symfony/event-dispatcher" />
+      <path value="$PROJECT_DIR$/vendor/symfony/dom-crawler" />
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-ctype" />
+      <path value="$PROJECT_DIR$/vendor/tubalmartin/cssmin" />
+      <path value="$PROJECT_DIR$/vendor/symfony/yaml" />
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/vendor/webmozart/assert" />
+      <path value="$PROJECT_DIR$/vendor/yiisoft/yii2" />
+      <path value="$PROJECT_DIR$/vendor/yiisoft/yii2-composer" />
+      <path value="$PROJECT_DIR$/vendor/yiisoft/yii2-debug" />
+      <path value="$PROJECT_DIR$/vendor/yiisoft/yii2-bootstrap" />
+      <path value="$PROJECT_DIR$/vendor/yiisoft/yii2-gii" />
+      <path value="$PROJECT_DIR$/vendor/yiisoft/yii2-faker" />
+      <path value="$PROJECT_DIR$/vendor/yiisoft/yii2-swiftmailer" />
+      <path value="$PROJECT_DIR$/vendor/gkralik/php-uglifyjs" />
+      <path value="$PROJECT_DIR$/vendor/mirocow/yii2-minify-view" />
+      <path value="$PROJECT_DIR$/vendor/phpspec/prophecy" />
+      <path value="$PROJECT_DIR$/vendor/phpmailer/phpmailer" />
+      <path value="$PROJECT_DIR$/vendor/monolog/monolog" />
+      <path value="$PROJECT_DIR$/vendor/phpspec/php-diff" />
+      <path value="$PROJECT_DIR$/vendor/phpoffice/phpspreadsheet" />
+      <path value="$PROJECT_DIR$/vendor/guzzlehttp/psr7" />
     </include_path>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
@@ -362,36 +385,41 @@
             <path>
               <item name="rt040.kientruc.net" type="b2602c69:ProjectViewProjectNode" />
               <item name="rt040.kientruc.net" type="462c0819:PsiDirectoryNode" />
-              <item name="backend" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="rt040.kientruc.net" type="b2602c69:ProjectViewProjectNode" />
+              <item name="rt040.kientruc.net" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+              <item name="models" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="rt040.kientruc.net" type="b2602c69:ProjectViewProjectNode" />
+              <item name="rt040.kientruc.net" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+              <item name="models" type="462c0819:PsiDirectoryNode" />
+              <item name="base" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="rt040.kientruc.net" type="b2602c69:ProjectViewProjectNode" />
+              <item name="rt040.kientruc.net" type="462c0819:PsiDirectoryNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="rt040.kientruc.net" type="b2602c69:ProjectViewProjectNode" />
+              <item name="rt040.kientruc.net" type="462c0819:PsiDirectoryNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="rt040.kientruc.net" type="b2602c69:ProjectViewProjectNode" />
+              <item name="rt040.kientruc.net" type="462c0819:PsiDirectoryNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
               <item name="controllers" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="rt040.kientruc.net" type="b2602c69:ProjectViewProjectNode" />
               <item name="rt040.kientruc.net" type="462c0819:PsiDirectoryNode" />
-              <item name="backend" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="rt040.kientruc.net" type="b2602c69:ProjectViewProjectNode" />
-              <item name="rt040.kientruc.net" type="462c0819:PsiDirectoryNode" />
-              <item name="backend" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="category" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="rt040.kientruc.net" type="b2602c69:ProjectViewProjectNode" />
-              <item name="rt040.kientruc.net" type="462c0819:PsiDirectoryNode" />
-              <item name="frontend" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="rt040.kientruc.net" type="b2602c69:ProjectViewProjectNode" />
-              <item name="rt040.kientruc.net" type="462c0819:PsiDirectoryNode" />
-              <item name="frontend" type="462c0819:PsiDirectoryNode" />
-              <item name="controllers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="rt040.kientruc.net" type="b2602c69:ProjectViewProjectNode" />
-              <item name="rt040.kientruc.net" type="462c0819:PsiDirectoryNode" />
               <item name="frontend" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -399,8 +427,14 @@
               <item name="rt040.kientruc.net" type="b2602c69:ProjectViewProjectNode" />
               <item name="rt040.kientruc.net" type="462c0819:PsiDirectoryNode" />
               <item name="frontend" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="site" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="rt040.kientruc.net" type="b2602c69:ProjectViewProjectNode" />
+              <item name="rt040.kientruc.net" type="462c0819:PsiDirectoryNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="theme" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -497,17 +531,18 @@
       <workItem from="1540992990908" duration="602000" />
       <workItem from="1541036446309" duration="23935000" />
       <workItem from="1541123034843" duration="8090000" />
+      <workItem from="1541382035878" duration="616000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="647307000" />
+    <option name="totallyTimeSpent" value="664979000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.195629" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1977612" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" weight="0.3297062" />
@@ -561,108 +596,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/frontend/views/layouts/main.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/views/site/login.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="550">
-          <caret line="73" column="64" selection-start-line="73" selection-start-column="24" selection-end-line="73" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/views/site/register.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="496">
-          <caret line="66" column="24" selection-start-line="66" selection-start-column="24" selection-end-line="66" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/views/classified/_form.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="550">
-          <caret line="129" column="66" selection-start-line="124" selection-start-column="35" selection-end-line="129" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/console/migrations/m130106_081932_create_district_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="500">
-          <caret line="29" column="109" lean-forward="true" selection-start-line="29" selection-start-column="7" selection-end-line="29" selection-end-column="109" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/console/migrations/m130107_032554_create_commune_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="457">
-          <caret line="28" column="5" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/controllers/DistrictController.php" />
-    <entry file="file://$PROJECT_DIR$/frontend/controllers/CommuneController.php" />
-    <entry file="file://$PROJECT_DIR$/frontend/controllers/ProvinceController.php" />
-    <entry file="file://$PROJECT_DIR$/backend/controllers/ProvinceController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="76" column="36" selection-start-line="76" selection-start-column="36" selection-end-line="76" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/models/Province.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="6" column="34" selection-start-line="6" selection-start-column="34" selection-end-line="6" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/models/base/Province.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="398">
-          <caret line="35" column="34" selection-start-line="35" selection-start-column="34" selection-end-line="35" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/models/District.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="4" column="22" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/models/Commune.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/config/main.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="496">
-          <caret line="37" column="18" selection-start-line="37" selection-start-column="18" selection-end-line="37" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/scp00591/home/hungnq1/public_html/phuonghoangparis.com/frontend/views/layouts/main.php" />
-    <entry file="file://$PROJECT_DIR$/frontend/models/SignupForm.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1100">
-          <caret line="45" column="30" selection-start-line="45" selection-start-column="30" selection-end-line="45" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/console/migrations/m180004_085809_create_style_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="18" column="9" lean-forward="true" selection-start-line="14" selection-start-column="7" selection-end-line="18" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/console/migrations/m180004_031635_create_category_project_table.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="421">
@@ -670,13 +603,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/scp26313/home/hungnq/public_html/caodangduocdhn.edu.vn/frontend/views/layouts/main.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="46" column="55" selection-start-line="46" selection-start-column="55" selection-end-line="46" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/scp26313/home/hungnq/public_html/caodangduocdhn.edu.vn/frontend/views/layouts/main.php" />
     <entry file="file://$PROJECT_DIR$/console/migrations/m181031_033215_update_user_table.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
@@ -714,28 +641,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/scp34928/home/hungnq1/public_html/phuonghoangparis.com/frontend/views/layouts/header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="14" column="26" lean-forward="true" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/scp53750/home/hungnq1/public_html/phuonghoangparis.com/frontend/views/layouts/footer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-300" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/assets/ThemeAsset.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="18" column="27" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/web/theme/css/font-awesome.min.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/scp34928/home/hungnq1/public_html/phuonghoangparis.com/frontend/views/layouts/header.php" />
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/scp53750/home/hungnq1/public_html/phuonghoangparis.com/frontend/views/layouts/footer.php" />
     <entry file="file://$PROJECT_DIR$/console/migrations/m180005_081912_create_project_table.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="800">
@@ -747,117 +654,24 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="775">
           <caret line="56" column="44" selection-start-line="56" selection-start-column="8" selection-end-line="56" selection-end-column="44" />
-          <folding>
-            <element signature="e#121#129#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/scp52199/home/hungnq2/public_html/Vingroupcuasothatinh.com/common/config/main-local.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="5" column="82" selection-start-line="5" selection-start-column="82" selection-end-line="5" selection-end-column="82" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/scp52199/home/hungnq2/public_html/Vingroupcuasothatinh.com/common/config/main-local.php" />
     <entry file="file://$PROJECT_DIR$/frontend/views/site/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-750" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/backend/controllers/PostController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="109" selection-start-line="109" selection-end-line="109" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/views/site/postnews.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="400" column="94" selection-start-line="400" selection-start-column="64" selection-end-line="400" selection-end-column="94" />
-          <folding>
-            <element signature="e#130#150#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/views/site/architectural.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="707">
-          <caret line="1006" column="140" selection-start-line="1006" selection-end-line="1006" selection-end-column="140" />
-          <folding>
-            <element signature="e#76#103#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/views/site/upload-project.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="1448" column="43" selection-start-line="1448" selection-start-column="15" selection-end-line="1448" selection-end-column="43" />
-          <folding>
-            <element signature="e#76#103#0#PHP" expanded="true" />
-            <element signature="n#form#0;n#div#2;n#div#0;n#div#0;n#section#1;n#!!top" />
-            <element signature="n#div#4;n#form#0;n#div#2;n#div#0;n#div#0;n#section#1;n#!!top" />
-            <element signature="n#script#0;n#form#0;n#div#2;n#div#0;n#div#0;n#section#1;n#!!top" />
-            <element signature="n#style#0;n#b#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/controllers/SiteController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="725">
-          <caret line="438" selection-start-line="438" selection-end-line="438" />
-          <folding>
-            <element signature="e#40#69#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/views/site/postnews.php" />
     <entry file="file://$PROJECT_DIR$/backend/controllers/CategoryController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-225" />
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/scp58146/home/hungnq1/public_html/diamondlotus.co/frontend/views/layouts/header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="12" column="48" lean-forward="true" selection-start-line="12" selection-start-column="48" selection-end-line="12" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/scp57436/home/hungnq1/public_html/diamondlotus.co/frontend/views/site/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="51" column="55" selection-start-line="51" selection-start-column="55" selection-end-line="51" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/scp44154/home/hungnq1/public_html/diamondlotus.co/common/helpers/FunctionHelper.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="121">
-          <caret line="264" column="79" lean-forward="true" selection-start-line="264" selection-start-column="79" selection-end-line="264" selection-end-column="79" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/helpers/FunctionHelper.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="97">
-          <caret line="352" column="51" selection-start-line="352" selection-start-column="27" selection-end-line="352" selection-end-column="51" />
-          <folding>
-            <element signature="e#35#67#0#PHP" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/scp58146/home/hungnq1/public_html/diamondlotus.co/frontend/views/layouts/header.php" />
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/scp57436/home/hungnq1/public_html/diamondlotus.co/frontend/views/site/index.php" />
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/scp44154/home/hungnq1/public_html/diamondlotus.co/common/helpers/FunctionHelper.php" />
     <entry file="file://$PROJECT_DIR$/backend/views/category/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="725">
@@ -865,52 +679,155 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/scp38122/home/hungnq1/public_html/diamondlotus.co/backend/views/category/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="582">
-          <caret line="173" column="72" selection-start-line="173" selection-start-column="72" selection-end-line="173" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/scp07433/home/senior/public_html/frontend/web/js/add-friend/add-friend.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1768" />
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/scp09162/home/senior/public_html/frontend/web/js/add-friend/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="550">
-          <caret line="172" column="27" selection-start-line="162" selection-start-column="23" selection-end-line="172" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/scp38122/home/hungnq1/public_html/diamondlotus.co/backend/views/category/index.php" />
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/scp07433/home/senior/public_html/frontend/web/js/add-friend/add-friend.js" />
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/scp09162/home/senior/public_html/frontend/web/js/add-friend/index.js" />
     <entry file="file://$PROJECT_DIR$/frontend/views/site/confirm.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="71">
-          <caret line="113" column="22" lean-forward="true" selection-start-line="113" selection-start-column="22" selection-end-line="113" selection-end-column="22" />
+          <caret line="113" column="22" selection-start-line="113" selection-start-column="22" selection-end-line="113" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/scp47313/home/hungnq/public_html/realestatevietnam.site/frontend/views/layouts/header.php" />
+    <entry file="file://$PROJECT_DIR$/common/helpers/FunctionHelper.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="97">
+          <caret line="191" column="27" selection-start-line="191" selection-start-column="27" selection-end-line="191" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/scp42798/home/hungnq1/public_html/152dienbienphu.com/common/helpers/FunctionHelper.php" />
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/scp41425/home/hungnq1/public_html/152dienbienphu.com/frontend/views/site/index.php" />
+    <entry file="file://$PROJECT_DIR$/frontend/web/theme/css/font-awesome.min.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/views/layouts/header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="106" column="79" selection-start-line="106" selection-start-column="79" selection-end-line="106" selection-end-column="79" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/views/site/personal-page.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/scp09358/home/hungnq/public_html/realestatevietnam.site/frontend/views/site/news-page.php" />
+    <entry file="file://$PROJECT_DIR$/frontend/views/site/resetPassword.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/scp55845/home/hungnq/public_html/realestatevietnam.site/frontend/views/layouts/main.php" />
+    <entry file="file://$PROJECT_DIR$/frontend/assets/ThemeAsset.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="421">
+          <caret line="37" column="35" selection-start-line="37" selection-start-column="35" selection-end-line="37" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/controllers/PostController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="650">
+          <caret line="110" column="77" selection-start-line="110" selection-start-column="37" selection-end-line="110" selection-end-column="77" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/models/base/Post.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="500">
+          <caret line="53" column="34" selection-start-line="53" selection-start-column="30" selection-end-line="53" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/models/Post.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/views/site/architectural.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-22942">
+          <caret line="16" selection-start-line="16" selection-end-line="16" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/views/site/upload-project.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="35150">
+          <caret line="1421" column="34" selection-start-line="1421" selection-start-column="34" selection-end-line="1421" selection-end-column="34" />
           <folding>
-            <element signature="e#7#27#0#PHP" expanded="true" />
-            <element signature="e#2631#2637#0#HTML" expanded="true" />
-            <element signature="e#2935#2941#0#HTML" expanded="true" />
-            <element signature="e#3129#3135#0#HTML" expanded="true" />
-            <element signature="e#3847#3853#0#HTML" expanded="true" />
-            <element signature="e#3853#3859#0#HTML" expanded="true" />
-            <element signature="e#3939#3945#0#HTML" expanded="true" />
-            <element signature="e#4058#4064#0#HTML" expanded="true" />
-            <element signature="e#4105#4111#0#HTML" expanded="true" />
-            <element signature="e#4224#4230#0#HTML" expanded="true" />
-            <element signature="e#4311#4317#0#HTML" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#div#0;n#div#1;n#form#0;n#div#0;n#div#2;n#div#0;n#div#0;n#section#1;n#!!top" expanded="true" />
+            <element signature="e#76#103#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/scp47313/home/hungnq/public_html/realestatevietnam.site/frontend/views/layouts/header.php">
+    <entry file="file://$PROJECT_DIR$/backend/views/post/_form.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="257">
-          <caret line="12" column="73" selection-start-line="12" selection-start-column="42" selection-end-line="12" selection-end-column="73" />
+        <state relative-caret-position="7225">
+          <caret line="295" column="119" selection-start-line="295" selection-start-column="42" selection-end-line="295" selection-end-column="119" />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/views/site/info-user.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="26" column="87" selection-start-line="26" selection-start-column="87" selection-end-line="26" selection-end-column="87" />
+          <folding>
+            <element signature="e#105#132#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/controllers/SiteController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="11000">
+          <caret line="459" column="39" selection-start-line="459" selection-start-column="39" selection-end-line="459" selection-end-column="39" />
+          <folding>
+            <element signature="e#40#69#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/scp15981/home/hungnq/public_html/realestatevietnam.site/frontend/views/layouts/main.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-479" />
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/scp20005/home/hungnq/public_html/realestatevietnam.site/frontend/views/site/sidebar-botton.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="696">
+          <caret line="59" column="22" selection-start-line="59" selection-start-column="22" selection-end-line="59" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/scp13141/home/hungnq/public_html/realestatevietnam.site/backend/controllers/AjaxController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="821">
+          <caret line="441" column="744" selection-start-line="441" selection-start-column="744" selection-end-line="441" selection-end-column="744" />
+          <folding>
+            <element signature="e#121#150#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/scp20149/home/hungnq/public_html/realestatevietnam.site/frontend/views/site/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="61" column="142" selection-start-line="61" selection-start-column="142" selection-end-line="61" selection-end-column="142" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/models/SignupForm.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="26" column="21" selection-start-line="26" selection-start-column="21" selection-end-line="26" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/scp12011/home/hungnq/public_html/realestatevietnam.site/frontend/web/Content/css/responsive.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="434">
+          <caret line="88" column="28" lean-forward="true" selection-start-line="88" selection-start-column="28" selection-end-line="88" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/scp15181/home/hungnq/public_html/realestatevietnam.site/frontend/views/layouts/footer.php" />
   </component>
 </project>

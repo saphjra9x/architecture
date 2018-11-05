@@ -3,6 +3,7 @@
 /* @var $this \yii\web\View */
 
 /* @var $content string */
+
 use yii\web\NotFoundHttpException;
 use common\helpers\FunctionHelper;
 use common\models\User;
@@ -100,29 +101,30 @@ function findModel($id)
                                     </a>
                                     <ul class="dropdown-menu customer-menu-header">
                                         <li>
-                                            <a href="ask/personal" title="Câu hỏi của bạn">Câu hỏi của bạn</a>
+                                            <a href="<?= Url::to(['site/question']) ?>" title="Câu hỏi của bạn">Câu hỏi của bạn</a>
                                         </li>
                                         <li>
-                                            <a href="1000100100113414/album" title="Trang cá nhân">
+                                            <a href="<?= Url::to(['site/info-user']) ?>" title="Trang cá nhân">
                                                 Trang cá nhân
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="profile/info" title="Thông tin tài khoản">
+                                            <a href="<?= Url::to(['site/info-user']) ?>" title="Thông tin tài khoản">
                                                 Thông tin tài khoản
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="profile/password" title="Đổi mật khẩu">Đổi mật khẩu</a>
+                                            <a href="<?= Url::to(['site/info-user']) ?>" title="Đổi mật khẩu">Đổi mật khẩu</a>
                                         </li>
                                         <li>
-                                            <a href="profile/noting" title="Chỉnh thông báo">
+                                            <a href="<?= Url::to(['site/info-user']) ?>" title="Chỉnh thông báo">
                                                 Chỉnh thông báo
                                             </a>
                                         </li>
                                         <li class="line"></li>
                                         <li>
-                                            <a href="<?= Url::to(['site/architectural']) ?>" title="Trở thành kiến trúc sư">
+                                            <a href="<?= Url::to(['site/architectural']) ?>"
+                                               title="Trở thành kiến trúc sư">
                                                 Trở thành kiến trúc sư
                                             </a>
                                         </li>
