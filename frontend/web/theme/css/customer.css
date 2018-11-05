@@ -1,0 +1,173 @@
+div.line{
+    border-bottom: 1px solid #e6e6e6;
+    margin-bottom: 10px;
+}
+div.white{
+    background: white;
+    border: 1px solid #e8e8e8;
+    border-top: 0;
+}
+.white-overfllow{
+    background: white;
+    overflow: hidden;
+    border: 1px solid #e8e8e8;
+    border-top: 0;
+}
+div.customer-maps{
+    /*min-height: 290px;*/
+    text-align: center;
+    color: white;
+}
+
+div.customer-maps.view-maps-image{
+    /*background-image: url('../image/maps.png');*/
+    background-position: center center;
+    background-size: 100% auto;
+    background-color: #f1f1f1;
+    position: relative;
+}
+div.customer-maps.view-maps-image:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: "";
+}
+div.customer-maps.view-maps-image a span{
+    position: absolute;
+    top:10px;
+    right: 10px;
+    display: inline-block;
+    color: white;
+}
+div.customer-profile{
+    clear: both;
+    position: relative;
+}
+div.customer-profile div.customer-profile-avatar{
+    width: 16.66666667%;
+    float: left;
+    position: absolute;
+    bottom: -53px;
+    left: 0;
+    padding: 0 15px;
+}
+div.customer-profile div.customer-profile-avatar .img-avatar{
+    border: 2px solid #ccc;
+    border-radius: 3px;
+}
+div.customer-profile div.customer-profile-avatar .img-avatar img{
+    width: 100%;
+}
+div.customer-profile div.customer-profile-info{
+    width: 40%;
+    float: left;
+    position: absolute;
+    bottom: 0;
+    left: 16.66666667%;
+    padding: 0 15px;
+}
+
+nav.menu-customer-header{
+    background: white;
+    border: none;
+    margin-bottom: 0;
+}
+
+div.customer-profile div.customer-profile-info ul{}
+div.customer-profile div.customer-profile-info ul li{
+    color: white;
+    margin-bottom: 5px;
+}
+div.customer-profile div.customer-profile-info ul li h2{
+    display: inline-block;
+    background: #00000085;
+    padding: 5px 10px 5px 5px;
+    font-size: 20px;
+}
+div.customer-left{
+}
+div.customer-left div.menu-of-customer{
+    border: 1px solid #e6e6e6;
+    margin-bottom: 10px;
+}
+div.customer-left div.menu-of-customer ul{}
+div.customer-left div.menu-of-customer ul li{
+    padding-left: 10px;
+    padding-right: 10px;
+    line-height: 20px;
+}
+div.customer-left div.menu-of-customer ul li a{
+    color: #3c3c3c;
+}
+div.customer-left div.menu-of-customer ul li.bd-01{
+    border-bottom: 1px solid #e6e6e6;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    padding-top: 10px;
+    color: #909090;
+}
+div.customer-left div.menu-of-customer ul li.bd-02{
+    border-top: 1px solid #ccc;
+    padding-top: 10px;
+    margin-top: 10px;
+}
+
+#thong-tin-tai-khoan-form label{
+    text-align: left;
+    font-weight: 100;
+    color: #c7c7c7;
+}
+#thong-tin-tai-khoan-form input{
+    border: 0;
+    border-bottom: 1px dashed #f1f1f1;
+    border-radius: 0;
+    box-shadow: none;
+    padding-left: 0px;
+}
+
+.linkActive-project,
+.linkActive-album,
+.linkActive-info,
+.linkActive-love{
+    position: relative;
+}
+.linkActive-project:before,
+.linkActive-album:before,
+.linkActive-info:before,
+.linkActive-love:before{
+    position: absolute;
+    left: 0;
+    bottom: -16px;
+    content: "";
+    height: 2px;
+    background: #248445;
+    width: 100%;
+    display: block;
+}
+
+
+@media (max-width: 980px) {
+    div.customer-profile div.customer-profile-avatar{
+        bottom: 12px;
+    }
+}
+@media (max-width: 768px) {
+    div.customer-profile div.customer-profile-avatar{
+        width: 25%;
+    }
+    div.customer-profile div.customer-profile-info{
+        left: 25%;
+    }
+}
+@media (max-width: 425px) {
+    div.customer-profile div.customer-profile-avatar{
+        width: 30%;
+    }
+    div.customer-profile div.customer-profile-info{
+        left: 30%;
+        width: 70%;
+    }
+}
+
