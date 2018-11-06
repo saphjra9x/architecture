@@ -29,6 +29,11 @@ use yii\web\BadRequestHttpException;
 use common\models\GeneralInformation;
 use PhpOffice\PhpSpreadsheet\IOFactory;
 use yii\data\Pagination;
+use common\models\base\TypeOfConstruction;
+use common\models\base\Position;
+use common\models\base\Style;
+use common\models\base\CategoryProject;
+
 class FunctionHelper
 {
 
@@ -609,15 +614,24 @@ class FunctionHelper
     /**
      * @return array|\yii\db\ActiveRecord[]
      */
-    public static function get_category_of_classified()
+    public static function get_category_of_project()
     {
-        $query = Category::find()->where(['status' => 1])->andWhere(['page_id' => 7])->asArray()->all();
+        $query = CategoryProject::find()->where(['status' => 1])->asArray()->all();
         return $query;
     }
 
-    public static function get_exigency_of_classified()
+    public static function get_type_of_construction()
     {
-        $query = Exigency::find()->asArray()->all();
+        $query = TypeOfConstruction::find()->where(['status' => 1])->asArray()->all();
+        return $query;
+    }
+
+    /**
+     * @return array|\yii\db\ActiveRecord[]
+     */
+    public static function get_style()
+    {
+        $query = Style::find()->where(['status' => 1])->asArray()->all();
         return $query;
     }
 
@@ -642,7 +656,7 @@ class FunctionHelper
     /**
      * @return array|\yii\db\ActiveRecord[]
      */
-    public static function get_projects_of_classified()
+    public static function get_projects_of_user()
     {
         $query = Project::find()->asArray()->all();
         return $query;

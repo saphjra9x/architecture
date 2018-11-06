@@ -2,6 +2,7 @@
 
 namespace frontend\controllers;
 
+use yii\helpers\Console;
 use yii\web\Response;
 use yii\web\Controller;
 use Yii;
@@ -10,6 +11,7 @@ use common\models\Category;
 use common\models\CategoryClassified;
 use common\models\Unit;
 use yii\data\Pagination;
+use common\models\User;
 
 /**
  * Site controller
@@ -79,5 +81,36 @@ class AjaxController extends Controller
         }
         return false;
     }
+    public function actionChangePassword()
+    {
+        Yii::$app->response->format = Response::FORMAT_JSON;
+        $post = Yii:: $app->request->post();
+        if (!Yii::$app->user->isGuest) {
+            if (isset($post['password_old']) && isset($post['password']) && isset($post['re_password'])) {
+                $user = User::findOne(Yii::$app->user->identity->getId());
+                if ($user) {
+                    if (Yii::$app->security->validatePassword($post['password_old'], $user->password_hash)) {
+                        if ($post['password'] == $post['re_password']) {
+                            if (strlen($post['password']) >= 6) {
+                                $user->setPassword($post['password']);
+
+                                return $user->save();
+                            } else { 
+                                return 'Mật khẩu mới phải lớn hơn 6 kí tự';
+                            }
+                        } else {
+                            return 'Mật khẩu mới không giống nhau';
+                        }
+                    } else {
+                        return 'Mật khẩu cũ không đúng';
+                    }
+                }
+            }
+        }
+
+        return false;
+    }
+
+
 }
 

@@ -19,14 +19,19 @@ class SignupForm extends Model
     public $last_name;
     public $gender;
     public $phone;
+    public $address;
     public $province_id;
     public $district_id;
+    public $commune_id;
+    public $avatar;
+    public $birthday;
 
     /**
      * {@inheritdoc}
      */
     public function rules()
     {
+        $str = 'This password has already been taken';
         return [
             ['username', 'trim'],
             ['username', 'required'],
@@ -35,33 +40,33 @@ class SignupForm extends Model
             ['email', 'trim'],
             ['email', 'required'],
             ['email', 'email'],
+            [['province_id', 'district_id', 'commune_id'], 'integer'],
+            ['address', 'string'],
             [['email', 'full_name'], 'string', 'max' => 255],
             ['email', 'unique', 'targetClass' => '\common\models\User', 'message' => 'This email address has already been taken.'],
-            [['phone','type_user_id'], 'integer'],
+            ['phone', 'integer'],
+            ['birthday', 'safe'],
+            [['gender', 'avatar'], 'string'],
             ['password', 'required'],
             ['password', 'string', 'min' => 6],
         ];
     }
 
     /**
-     * Signs user up.
-     *
-     * @return User|null the saved model or null if saving fails
+     * @return User|null
      */
     public function signup()
     {
         if (!$this->validate()) {
             return null;
         }
-
         $user = new User();
         $user->username = $this->username;
-        $user->full_name = $this->full_name;
         $user->email = $this->email;
-        $user->permission = $this->permission;
+        $user['full_name'] = $this->full_name;
+        $user['permission'] = 3;
         $user->setPassword($this->password);
         $user->generateAuthKey();
-
         return $user->save() ? $user : null;
     }
 }

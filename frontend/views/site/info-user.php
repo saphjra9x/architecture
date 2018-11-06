@@ -1,12 +1,19 @@
 <?php
 /**
  * Created by PhpStorm.
- * User: thuc
- * Date: 11/1/2018
- * Time: 1:51 PM
+ * Date: 10/31/2018
+ * Time: 3:00 PM
+ * $model common\models\User
  */
-?>
 
+use yii\widgets\ActiveForm;
+use yii\helpers\Url;
+use yii\helpers\ArrayHelper;
+use common\models\Province;
+use common\models\District;
+use common\models\Commune;
+
+?>
 <section>
     <div class="container">
         <div class="white">
@@ -17,13 +24,14 @@
                 <div class="col-md-12">
                     <div class="customer-profile-avatar">
                         <div class="img-avatar">
-                            <img src="/img/200x200no-image.png" alt="" class="img-responsive">
+                            <img src="<?= !$model['avatar'] ? '/img/200x200no-image.png' : $model['avatar'] ?>"
+                                 alt="" class="img-responsive">
                         </div>
                     </div>
                     <div class="customer-profile-info">
                         <ul class="list-unstyled">
-                            <li><h2>Nguyễn Hùng</h2></li>
-                            <li>Người dùng</li>
+                            <li><h2><?= $model['full_name'] ?></h2></li>
+                            <li><?= $model['permission'] == 3 ? 'Người Dùng' : 'Kiến Trúc Sư' ?></li>
                         </ul>
                     </div>
                 </div>
@@ -34,77 +42,247 @@
 <section>
     <div class="container">
         <div class="white">
-
             <div class="clearfix"></div>
-
             <div class="white-overfllow">
                 <div class="col-md-2 customer-left">
                     <div style="min-height: 70px"></div>
                     <div class="menu-of-customer">
                         <ul class="list-unstyled">
                             <li class="bd-01">Quản lý tài khoản</li>
-                            <li><a href="profile/info" title="Thông tin tài khoản">Thông tin tài khoản</a></li>
-                            <li><a href="profile/password" title="Đổi mật khẩu">Đổi mật khẩu</a></li>
-                            <li class="bd-02"><a href="profile/noting" title="Chỉnh thông báo">Chỉnh thông báo</a>
+                            <li>
+                                <a href="<?= Url::to(['site/info-user']) ?>" title="Thông tin tài khoản">
+                                    Thông tin tài khoản
+                                </a>
                             </li>
-                            <li><a href="page/kts" title="Trở thành kiến trúc sư">Trở thành kiến trúc sư</a></li>
-                            <li><a href="https://shop.kientruc.com/profile/upgrade" title="Trở thành kiến trúc sư">Hoặc
-                                    Trở thành seller</a></li>
+                            <li>
+                                <a href="<?= Url::to(['site/password']) ?>" title="Đổi mật khẩu">
+                                    Đổi mật khẩu
+                                </a>
+                            </li>
                             <li class="bd-02">
-                                <form action="/login/logout" method="post">
-                                    <input type="hidden" name="_csrf-frontend"
-                                           value="mQsqaNNe6ibjWXYjX1iXguZkhzmaFmf6SplL99H78Eb6RBgAnijdEpQPHkI9bPHRsgK0d_1MFrccrTrEqa6Acg==">
-                                    <button type="submit" class="btn btn-link logout">Đăng xuất</button>
-                                </form>
+                                <a href="profile/noting" title="Chỉnh thông báo">
+                                    Chỉnh thông báo
+                                </a>
+                            </li>
+                            <li>
+                                <a href="<?= Url::to(['site/architect']) ?>" title="Trở thành kiến trúc sư">
+                                    Trở thành kiến trúc sư
+                                </a>
+                            </li>
+                            <li class="bd-02">
+                                <a href="<?= Url::to(['site/logout']) ?>">
+                                    <button type="submit" class="btn btn-link logout">
+                                        Đăng xuất
+                                    </button>
+                                </a>
                             </li>
                         </ul>
                     </div>
                 </div>
                 <div class="col-md-7 customer-main">
+
                     <div class="h4">
-                        <i class="fa fa-user"></i> Đổi mật khẩu
+                        <i class="fa fa-user"></i> Thông tin tài khoản
                     </div>
                     <div class="line"></div>
-                    <p>Chúng tôi kết đảm bảo an toàn tuyệt đối cho các thông tin cá nhân của bạn</p>
-                    <form class="form-horizontal" method="post">
-                        <div class="form-group field-doimatkhauform-pass_old required">
-                            <label class="control-label col-sm-4 col-md-4 col-lg-4" for="doimatkhauform-pass_old">Mật
-                                khẩu cũ</label>
-                            <div class="col-sm-6">
-                                <input type="password" id="password" class="form-control"
-                                       placeholder="...." aria-required="true">
-                                <p class="help-block help-block-error "></p>
-                            </div>
+                    <p>
+                        <?= $_SERVER['SERVER_NAME'] ?>
+                        cam kết đảm bảo an toàn tuyệt đối cho các thông tin cá nhân của bạn
+                    </p>
 
-                        </div>
-                        <div class="form-group field-doimatkhauform-pass_new required">
-                            <label class="control-label col-sm-4 col-md-4 col-lg-4" for="doimatkhauform-pass_new">Mật
-                                khẩu mới</label>
-                            <div class="col-sm-6">
-                                <input type="password" id="new-password" class="form-control"
-                                       placeholder="...." aria-required="true">
-                                <p class="help-block help-block-error "></p>
-                            </div>
-
-                        </div>
-                        <div class="form-group field-doimatkhauform-pass_new_again required">
+                    <?php $form = ActiveForm::begin() ?>
+                    <form id="thong-tin-tai-khoan-form" class="form-horizontal">
+                        <input type="hidden" name="_csrf-frontend"
+                               value="TMWsK-DHwSv8eoPysJh1X3xLEGCQBlT_qxpLEnBVaywChvx81KOSGJFJ87CB1EINHSogV-pAG7mcaB59IRcKVg==">
+                        <div class="form-group field-thongtintaikhoanform-email required">
                             <label class="control-label col-sm-4 col-md-4 col-lg-4"
-                                   for="doimatkhauform-pass_new_again">Nhập lại mật khẩu mới</label>
+                                   for="thongtintaikhoanform-email">Email</label>
                             <div class="col-sm-6">
-                                <input type="password" id="re-password" class="form-control"
-                                       placeholder="...." aria-required="true">
+                                <?= $form->field($model, 'email')->textInput(['class' => 'form-control'])->label(false) ?>
                                 <p class="help-block help-block-error "></p>
                             </div>
 
+                        </div>
+                        <div class="form-group field-thongtintaikhoanform-full_name">
+                            <label class="control-label col-sm-4 col-md-4 col-lg-4"
+                                   for="thongtintaikhoanform-full_name">Họ tên hiển thị</label>
+                            <div class="col-sm-6">
+                                <?= $form->field($model, 'full_name')->textInput(['class' => 'form-control'])->label(false) ?>
+                                <p class="help-block help-block-error "></p>
+                            </div>
+                        </div>
+                        <div class="form-group field-thongtintaikhoanform-birthday">
+                            <label class="control-label col-sm-4 col-md-4 col-lg-4"
+                                   for="thongtintaikhoanform-birthday">
+                                Ngày tháng năm sinh
+                            </label>
+                            <div class="col-sm-6">
+                                <?= $form->field($model, 'birthday')->input('date', ['value' => date('Y-m-d', time() + 7 * 3600)])->label(false) ?>
+                                <p class="help-block help-block-error "></p>
+                            </div>
+
+                        </div>
+                        <div class="form-group field-thongtintaikhoanform-sex">
+                            <label class="control-label col-sm-4 col-md-4 col-lg-4">Giới tính</label>
+                            <div class="col-sm-6">
+                                <?= $form->field($model, 'gender')->textInput(
+                                    ['class' => 'hidden', 'id' => 'gender']
+                                )->label(false) ?>
+                                <div id="gender-radio">
+                                    <label class="radio-inline">
+                                        <input type="radio" name="sex"
+                                               value="Nam">
+                                        Nam
+                                    </label>
+                                    <label class="radio-inline">
+                                        <input type="radio" name="sex"
+                                               value="Nữ" checked="">
+                                        Nữ
+                                    </label>
+                                </div>
+                                <p class="help-block help-block-error"></p>
+                            </div>
+                        </div>
+                        <div class="form-group field-thongtintaikhoanform-phone">
+                            <label class="control-label col-sm-4 col-md-4 col-lg-4"
+                                   for="thongtintaikhoanform-phone">SDT</label>
+                            <div class="col-sm-6">
+                                <?= $form->field($model, 'phone')->textInput(['class' => 'form-control'])->label(false) ?>
+                                <p class="help-block help-block-error "></p>
+                            </div>
+
+                        </div>
+                        <div class="form-group field-thongtintaikhoanform-idprovince required">
+                            <label class="control-label col-sm-4 col-md-4 col-lg-4"
+                                   for="thongtintaikhoanform-idprovince">Chọn tỉnh/Thành phố</label>
+                            <div class="col-sm-6">
+                                <select id="thongtintaikhoanform-idprovince"
+                                        class="form-control select2-hidden-accessible"
+                                        name="ThongTinTaiKhoanForm[idprovince]" aria-required="true"
+                                        data-s2-options="s2options_d6851687" data-krajee-select2="select2_ac05a3ac"
+                                        style="display:none" tabindex="-1" aria-hidden="true">
+                                    <option value="">Chọn tỉnh</option>
+                                    <option value="01" selected="">Hà Nội</option>
+                                    <option value="02">Hà Giang</option>
+                                    <option value="04">Cao Bằng</option>
+                                    <option value="06">Bắc Kạn</option>
+                                    <option value="08">Tuyên Quang</option>
+                                    <option value="10">Lào Cai</option>
+                                    <option value="11">Điện Biên</option>
+                                    <option value="12">Lai Châu</option>
+                                    <option value="14">Sơn La</option>
+                                    <option value="15">Yên Bái</option>
+                                    <option value="17">Hòa Bình</option>
+                                    <option value="19">Thái Nguyên</option>
+                                    <option value="20">Lạng Sơn</option>
+                                    <option value="22">Quảng Ninh</option>
+                                    <option value="24">Bắc Giang</option>
+                                    <option value="25">Phú Thọ</option>
+                                    <option value="26">Vĩnh Phúc</option>
+                                    <option value="27">Bắc Ninh</option>
+                                    <option value="30">Hải Dương</option>
+                                    <option value="31">Hải Phòng</option>
+                                    <option value="33">Hưng Yên</option>
+                                    <option value="34">Thái Bình</option>
+                                    <option value="35">Hà Nam</option>
+                                    <option value="36">Nam Định</option>
+                                    <option value="37">Ninh Bình</option>
+                                    <option value="38">Thanh Hóa</option>
+                                    <option value="40">Nghệ An</option>
+                                    <option value="42">Hà Tĩnh</option>
+                                    <option value="44">Quảng Bình</option>
+                                    <option value="45">Quảng Trị</option>
+                                    <option value="46">Thừa Thiên Huế</option>
+                                    <option value="48">Đà Nẵng</option>
+                                    <option value="49">Quảng Nam</option>
+                                    <option value="51">Quảng Ngãi</option>
+                                    <option value="52">Bình Định</option>
+                                    <option value="54">Phú Yên</option>
+                                    <option value="56">Khánh Hòa</option>
+                                    <option value="58">Ninh Thuận</option>
+                                    <option value="60">Bình Thuận</option>
+                                    <option value="62">Kon Tum</option>
+                                    <option value="64">Gia Lai</option>
+                                    <option value="66">Đắk Lắk</option>
+                                    <option value="67">Đắk Nông</option>
+                                    <option value="68">Lâm Đồng</option>
+                                    <option value="70">Bình Phước</option>
+                                    <option value="72">Tây Ninh</option>
+                                    <option value="74">Bình Dương</option>
+                                    <option value="75">Đồng Nai</option>
+                                    <option value="77">Bà Rịa - Vũng Tàu</option>
+                                    <option value="79">Hồ Chí Minh</option>
+                                    <option value="80">Long An</option>
+                                    <option value="82">Tiền Giang</option>
+                                    <option value="83">Bến Tre</option>
+                                    <option value="84">Trà Vinh</option>
+                                    <option value="86">Vĩnh Long</option>
+                                    <option value="87">Đồng Tháp</option>
+                                    <option value="89">An Giang</option>
+                                    <option value="91">Kiên Giang</option>
+                                    <option value="92">Cần Thơ</option>
+                                    <option value="93">Hậu Giang</option>
+                                    <option value="94">Sóc Trăng</option>
+                                    <option value="95">Bạc Liêu</option>
+                                    <option value="96">Cà Mau</option>
+                                </select>
+                                <?= $form->field($model, 'province_id')->dropDownList(
+                                    ArrayHelper::map(Province::find()->all(), 'id', 'ten'),
+                                    [
+                                        'prompt' => '- ' . Yii::t('app', 'Chọn tỉnh') . ' -',
+                                        'onchange' => '$.post( "' . Yii::$app->urlManager->createUrl('admin/ajax/get-district-by-province-id?province_id=') . '"+$(this).val(), function( data ) {
+                                            $("select#district" ).html(data);
+                                        });',
+                                        'id' => 'province',
+                                        'class' => 'form-control js-example-basic-single',
+                                    ], [
+                                        'onchange' => 'getThongTinMaps(1)',
+                                    ]
+                                )->label(false) ?>
+                                <p class="help-block help-block-error "></p>
+                            </div>
+
+                        </div>
+                        <div class="form-group field-thongtintaikhoanform-idprovince required">
+                            <label class="control-label col-sm-4 col-md-4 col-lg-4" for="subcat1-id">
+                                Chọn quận/huyện
+                            </label>
+                            <div class="col-sm-6">
+                                <?= $form->field($model, 'district_id')->dropDownList(
+                                    ArrayHelper::map(District::find()->where(['=', 'province_id', $model->province_id])->all(), 'id', 'ten'),
+                                    [
+                                        'prompt' => Yii::t('app', '--Chọn huyện--'),
+                                        'onchange' => '$.post( "' . Yii::$app->urlManager->createUrl('admin/ajax/get-commune-by-district-id?district_id=') . '"+$(this).val(), function( data ) {
+                                            $("select#commune" ).html(data);
+                                        });',
+                                        'id' => 'district',
+                                    ], ['onchange' => 'getThongTinMaps(2)',])->label(false) ?>
+                                <p class="help-block help-block-error "></p>
+                            </div>
+
+                        </div>
+                        <div class="form-group field-thongtintaikhoanform-idprovince required">
+                            <label class="control-label col-sm-4 col-md-4 col-lg-4" for="subcat2-id">Phường/xã</label>
+                            <div class="col-sm-6">
+                                <?= $form->field($model, 'commune_id')->dropDownList(
+                                    ArrayHelper::map(Commune::find()->where(['=', 'district_id', $model->district_id])->all(), 'id', 'ten'),
+                                    [
+                                        'prompt' => Yii::t('app', '--Chọn xã--'),
+                                        'id' => 'commune',
+                                        'onchange' => 'getThongTinMaps(3)',
+                                    ])->label(false) ?>
+                                <p class="help-block help-block-error "></p>
+                            </div>
                         </div>
                         <div class="form-group">
                             <div class="text-right col-md-12">
-                                <button type="button" onclick="change_password()" class="btn btn-success"
-                                        name="login-button">Đổi mật khẩu
+                                <button type="submit" class="btn btn-success" name="login-button">Lưu thông tin
                                 </button>
                             </div>
                         </div>
+
                     </form>
+                    <?php $form = ActiveForm::end() ?>
                 </div>
                 <div class="col-md-3 customer-right">
                     <div class="h4" style="color: #248445;">
@@ -351,9 +529,15 @@
                     </div>
                 </div>
             </div>
-
         </div>
     </div>
 </section>
-
-
+<script src="/theme/js/jquery-3.3.1.min.js"></script>
+<script>
+    $('#gender-radio input').on('change', function () {
+        let gender = $('input[name=sex]:checked').val();
+        $('#gender').val(gender);
+    });
+    let gender = $('input[name=sex]:checked').val();
+    $('#gender').val(gender);
+</script>

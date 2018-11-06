@@ -48,8 +48,6 @@ return [
 //			    '<category_slug>/<content_slug>' => 'site/view',
                 '<category_slug>' => 'site/view',
                 '' => 'site/index',
-//                '<category_slug>' => 'mobile-site/view',
-//                '' => 'mobile-site/index',
             ],
         ]
     ],

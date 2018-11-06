@@ -8,10 +8,10 @@
 
 namespace backend\controllers;
 
+use Yii;
 use common\models\Classified;
 use common\models\District;
 use common\models\Utilities;
-use Yii;
 use yii\web\Response;
 use yii\web\Controller;
 use common\models\Album;
@@ -28,6 +28,7 @@ use common\models\PhotoLocation;
 use common\helpers\FunctionHelper;
 use common\models\Tab;
 use PHPMailer\PHPMailer\PHPMailer;
+use common\models\Commune;
 
 /**
  * AjaxController
@@ -371,6 +372,9 @@ class AjaxController extends Controller
 
     }
 
+    /**
+     * @param $province_id
+     */
     public function actionGetDistrictByProvinceId($province_id)
     {
         $districts = District::find()
@@ -383,6 +387,21 @@ class AjaxController extends Controller
         endforeach;
     }
 
+    public function actionGetCommuneByDistrictId($district_id)
+    {
+        $communes = Commune::find()
+            ->where(['district_id' => $district_id])
+            ->orderBy('id DESC')
+            ->all();
+        echo "<option value=''>" . Yii::t('app', '-- Chọn xã\phường --') . "</option>";
+        foreach ($communes as $key => $value):
+            echo "<option value=" . $value['id'] . ">" . $value['ten'] . "</option>";
+        endforeach;
+    }
+
+    /**
+     * @return bool
+     */
     public function actionEditContentImage()
     {
         Yii::$app->response->format = Response::FORMAT_JSON;

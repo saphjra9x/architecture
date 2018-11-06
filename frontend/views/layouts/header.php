@@ -4,6 +4,7 @@
 
 /* @var $content string */
 
+use yii\web\NotFoundHttpException;
 use common\helpers\FunctionHelper;
 use common\models\User;
 use yii\helpers\Url;
@@ -55,21 +56,89 @@ function findModel($id)
                 <div class="pull-right div-menu-top a-menu-top-2">
                     <div class="navbar-collapse" id="bs-example-navbar-collapse-0">
                         <ul class="nav navbar-right">
-                            <li>
-                                <a style="padding: 15px 5px;"
-                                   href="<?= Url::to(['site/register'])?>"
-                                   title="Đăng kí" class="a-white hidden-width-320">
-                                    Đăng kí
-                                </a>
-                            </li>
-                            <li>
-                                <a style="padding: 15px 5px;"
-                                   href="https://login.kientruc.com?link=https://www.kientruc.com" title="Đăng nhập"
-                                   class="a-white">
-                                    Đăng nhập
-                                </a>
-                            </li>
+                            <?php if (!$user): ?>
+                                <li>
+                                    <a style="padding: 15px 5px;"
+                                       href="<?= Url::to(['site/register']) ?>"
+                                       title="Đăng kí" class="a-white hidden-width-320">
+                                        Đăng kí
+                                    </a>
+                                </li>
+                                <li>
+                                    <a style="padding: 15px 5px;"
+                                       href="<?= Url::to(['site/login']) ?>" title="Đăng nhập"
+                                       class="a-white">
+                                        Đăng nhập
+                                    </a>
+                                </li>
+                            <?php endif;
+                            if ($user): ?>
+                                <li class="dropdown">
+                                    <a href="#" title="Cá nhân" class="dropdown-toggle a-white" data-toggle="dropdown"
+                                       role="button" aria-haspopup="true" aria-expanded="false">
+                                        <?php if (!$user['avatar']) { ?>
+                                            <span class="span-avatar-icon"
+                                                  style="background-image: url(/uploads/advertises/200x200no-image.png); ">
+                                        </span>
+                                        <?php } else { ?>
+                                            <span class="span-avatar-icon"
+                                                  style="background-image: url(<?= $user['avatar'] ?>); ">
+                                        </span>
+                                        <?php } ?>
+                                        <b class="b-avatar-icon">
+                                            <?= $user['full_name'] ?>
+                                        </b>
+                                        <?php if ($user['permission'] == 3): ?>
+                                            <i class="i-avatar-icon">
+                                                Người dùng
+                                            </i>
+                                        <?php endif;
+                                        if ($user['permission'] > 3): ?>
+                                            <i class="i-avatar-icon">
+                                                Kiến trúc sư
+                                            </i>
+                                        <?php endif; ?>
+                                    </a>
+                                    <ul class="dropdown-menu customer-menu-header">
+                                        <li>
+                                            <a href="<?= Url::to(['site/question']) ?>" title="Câu hỏi của bạn">Câu hỏi của bạn</a>
+                                        </li>
+                                        <li>
+                                            <a href="<?= Url::to(['site/album']) ?>" title="Trang cá nhân">
+                                                Trang cá nhân
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="<?= Url::to(['site/info-user']) ?>" title="Thông tin tài khoản">
+                                                Thông tin tài khoản
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="<?= Url::to(['site/password']) ?>" title="Đổi mật khẩu">Đổi mật khẩu</a>
+                                        </li>
+                                        <li>
+                                            <a href="<?= Url::to(['site/info-user']) ?>" title="Chỉnh thông báo">
+                                                Chỉnh thông báo
+                                            </a>
+                                        </li>
+                                        <li class="line"></li>
+                                        <li>
+                                            <a href="<?= Url::to(['site/architectural']) ?>"
+                                               title="Trở thành kiến trúc sư">
+                                                Trở thành kiến trúc sư
+                                            </a>
+                                        </li>
+                                        <li class="line"></li>
+                                        <li>
+                                            <a href="<?= Url::to(['site/logout']) ?>" title="Đăng xuất">
+                                                Đăng xuất
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            <?php endif; ?>
                         </ul>
+
                     </div><!-- /.navbar-collapse -->
                 </div>
 
@@ -103,15 +172,15 @@ function findModel($id)
                                                 <div class="hover-menu hover-menu-tim-kien-truc-su">
                                                     <ul class="list-unstyled">
                                                         <?php foreach ($chi as $key_chi => $value_chi): ?>
-                                                        <?php if ($key_chi==2 || $key_chi==7):?>
-                                                            <li class="duong-ke-ngan-cach">
-                                                                <?php else:?>
+                                                            <?php if ($key_chi == 2 || $key_chi == 7): ?>
+                                                                <li class="duong-ke-ngan-cach">
+                                                            <?php else: ?>
                                                                 <li class="">
-                                                            <?php endif;?>
-                                                                <a href="<?= Url::to(['site/view', 'category_slug' => $value_chi['slug']]) ?>"
-                                                                   title="<?= $value_chi['title'] ?>">
-                                                                    <?= $value_chi['title']; ?>
-                                                                </a>
+                                                            <?php endif; ?>
+                                                            <a href="<?= Url::to(['site/view', 'category_slug' => $value_chi['slug']]) ?>"
+                                                               title="<?= $value_chi['title'] ?>">
+                                                                <?= $value_chi['title']; ?>
+                                                            </a>
                                                             </li>
                                                         <?php endforeach; ?>
                                                     </ul>

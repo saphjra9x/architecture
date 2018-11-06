@@ -8,6 +8,7 @@ use backend\controllers\base\AdminController;
 use common\models\Province;
 use common\helpers\FunctionHelper;
 use common\models\District;
+use common\models\Commune;
 
 /**
  * ProvinceController implements the CRUD actions for Province model.
@@ -63,6 +64,23 @@ class ProvinceController extends AdminController
 
             $start = 2;
             $end = 714;
+
+            FunctionHelper::import_data_excel($table, $attributes, $file, $start, $end);
+        }
+        if (!Commune::find()->asArray()->all()) {
+            $table = 'commune';
+            $attributes = [
+                'A' => 'id',
+                'B' => 'ten',
+                'C' => 'ten_tieng_anh',
+                'D' => 'cap',
+                'E' => 'district_id'
+            ];
+
+            $file = '../../uploads/cms/excel/xa.xlsx';
+
+            $start = 2;
+            $end = 11163;
 
             FunctionHelper::import_data_excel($table, $attributes, $file, $start, $end);
         }
